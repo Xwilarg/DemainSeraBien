@@ -5,9 +5,6 @@ using UnityEngine.InputSystem;
 
 public class DragScript : MonoBehaviour
 {
-    private float dist;
-    private bool dragging = false;
-    private Vector3 offset;
     private Transform toDrag;
 
     [SerializeField]
@@ -16,16 +13,16 @@ public class DragScript : MonoBehaviour
     private void Update()
     {
         if (Mouse.current.leftButton.wasReleasedThisFrame) {
-            dragging = false;
+            toDrag.GetComponent<Draggable>().EndDrag();
             return;
         }
 
         if (Mouse.current.leftButton.wasPressedThisFrame) {
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (Physics.Raycast(ray, out RaycastHit hit, 1000)) {
-                if (hit.collider.transform.GetComponent<Draggable>() != null) {
-                    dragging = true;
+                if (hit.collider.transform.GetComponent<Draggable>() != null && hit.collider.transform.GetComponent<Draggable>().CanPick) {
                     toDrag = hit.collider.transform;
+                    toDrag.GetComponent<Draggable>().CanPick = false;
                     toDrag.GetComponent<SpringJoint>().anchor = hit.collider.transform.position;
                     toDrag.GetComponent<SpringJoint>().connectedBody = GhostMouse.GetComponent<Rigidbody>();
                 }
