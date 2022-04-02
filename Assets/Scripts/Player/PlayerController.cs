@@ -19,13 +19,16 @@ namespace LudumDare50.Player
         [SerializeField]
         private LifespanBar _healthBar;
 
+        [SerializeField]
+        private LifespanBar _barFood, _barEntertainment, _barSleep, _barToilet;
+
         private float _age;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
             { NeedType.Food, .4f },
             { NeedType.Entertainment, .1f },
             { NeedType.Sleep, .1f },
-            { NeedType.Exercice, .1f }
+            { NeedType.Toilet, .1f }
         };
 
         private NavMeshAgent _agent;
@@ -88,7 +91,12 @@ namespace LudumDare50.Player
                     string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value:0.00}"));
             }
 
-            _healthBar.SetValue(_age / _info.MaxAge);
+            _healthBar.SetValue(_age / _info.MaxAge, true);
+
+            _barEntertainment.SetValue(_needs[NeedType.Entertainment], false);
+            _barFood.SetValue(_needs[NeedType.Food], false);
+            _barToilet.SetValue(_needs[NeedType.Toilet], false);
+            _barSleep.SetValue(_needs[NeedType.Sleep], false);
         }
 
         public void OnDrawGizmos()
