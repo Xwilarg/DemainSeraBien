@@ -16,6 +16,9 @@ namespace LudumDare50.Player
         [SerializeField]
         private PlayerInfo _info;
 
+        [SerializeField]
+        private LifespanBar _healthBar;
+
         private float _age;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
@@ -65,7 +68,7 @@ namespace LudumDare50.Player
                     _needs[keys.ElementAt(i)] = 1f;
                 }
             }
-            UpdateDebugText();
+            UpdateUI();
         }
 
         private void UpdateDestination()
@@ -73,10 +76,10 @@ namespace LudumDare50.Player
             _age -= _info.AgeProgression;
             _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
             _agent.destination = _currNode.transform.position;
-            UpdateDebugText();
+            UpdateUI();
         }
 
-        private void UpdateDebugText()
+        private void UpdateUI()
         {
             if (_debugText != null)
             {
@@ -84,6 +87,8 @@ namespace LudumDare50.Player
                     $"Age: {_age:0.00}\n" +
                     string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value:0.00}"));
             }
+
+            _healthBar.SetValue(_age / _info.MaxAge);
         }
 
         public void OnDrawGizmos()
