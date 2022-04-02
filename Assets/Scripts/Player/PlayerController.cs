@@ -44,13 +44,21 @@ namespace LudumDare50.Player
 
         private void OnCollisionEnter(Collision collision)
         {
-            var rb = collision.collider.GetComponent<Rigidbody>();
-
-            if(rb != null)
+            if (collision.collider.CompareTag("Food"))
             {
-                var dir = collision.collider.transform.position - transform.position;
-                dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
-                rb.AddForce(dir * 10, ForceMode.Impulse);
+                // Eat food we collide with
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                var rb = collision.collider.GetComponent<Rigidbody>();
+
+                if (rb != null)
+                {
+                    var dir = collision.collider.transform.position - transform.position;
+                    dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
+                    rb.AddForce(dir * 10, ForceMode.Impulse);
+                }
             }
         }
     }
