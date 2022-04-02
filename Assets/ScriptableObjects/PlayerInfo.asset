@@ -17,3 +17,5 @@ MonoBehaviour:
   MinDistBetweenNode: 0.5
   PropulsionForce: 25
   FoodPower: 0.1
+  MaxAge: 80
+  AgeProgression: 0.2

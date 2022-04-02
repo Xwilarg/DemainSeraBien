@@ -16,6 +16,7 @@ namespace LudumDare50.Player
         [SerializeField]
         private PlayerInfo _info;
 
+        private float _age;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
             { NeedType.Food, .4f },
@@ -28,9 +29,16 @@ namespace LudumDare50.Player
 
         private NeedType MostNeeded => _needs.OrderByDescending(x => x.Value).First().Key;
 
+        public void ReduceNeed(NeedType need)
+        {
+            _needs[need] = 0f;
+        }
+
         private void Start()
         {
-            _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
+            _agent = GetComponent<NavMeshAgent>();
+
+            _age = _info.MaxAge;
             UpdateDestination();
         }
 
@@ -39,13 +47,14 @@ namespace LudumDare50.Player
             // We are close enough to node, we are going to the next one
             if (Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
-                _needs[_currNode.GivenNeed] = 0f;
+                ReduceNeed(_currNode.GivenNeed);
                 UpdateDestination();
             }
         }
 
         private void Update()
         {
+            _age -= Time.deltaTime * _info.AgeProgression;
             var keys = _needs.Keys;
             for (int i = keys.Count - 1; i >= 0; i--)
             {
@@ -60,6 +69,7 @@ namespace LudumDare50.Player
 
         private void UpdateDestination()
         {
+            _age -= _info.AgeProgression;
             _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
             _agent.destination = _currNode.transform.position;
             UpdateDebugText();
@@ -69,7 +79,9 @@ namespace LudumDare50.Player
         {
             if (_debugText != null)
             {
-                _debugText.text = string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value:0.00}"));
+                _debugText.text =
+                    $"Age: {_age:0.00}\n" +
+                    string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value:0.00}"));
             }
         }
 

@@ -21,5 +21,9 @@ namespace LudumDare50.SO
 
         [Header("Needs")]
         public float FoodPower;
+
+        [Header("Age")]
+        public float MaxAge;
+        public float AgeProgression;
     }
 }
