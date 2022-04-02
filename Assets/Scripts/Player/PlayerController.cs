@@ -102,6 +102,10 @@ namespace LudumDare50.Player
             {
                 // Eat food we collide with
                 _needs[NeedType.Food] -= _info.FoodPower;
+                if (_needs[NeedType.Food] < 0f)
+                {
+                    _needs[NeedType.Food] = 0f;
+                }
                 Destroy(collision.gameObject);
                 UpdateDestination();
             }
