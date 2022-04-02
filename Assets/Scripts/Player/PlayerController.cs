@@ -91,12 +91,17 @@ namespace LudumDare50.Player
                     string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value:0.00}"));
             }
 
-            _healthBar.SetValue(_age / _info.MaxAge, true);
+            _healthBar.SetValue(_age / _info.MaxAge);
 
-            _barEntertainment.SetValue(_needs[NeedType.Entertainment], false);
-            _barFood.SetValue(_needs[NeedType.Food], false);
-            _barToilet.SetValue(_needs[NeedType.Toilet], false);
-            _barSleep.SetValue(_needs[NeedType.Sleep], false);
+            _barEntertainment.SetValue(_needs[NeedType.Entertainment]);
+            _barFood.SetValue(_needs[NeedType.Food]);
+            _barToilet.SetValue(_needs[NeedType.Toilet]);
+            _barSleep.SetValue(_needs[NeedType.Sleep]);
+        }
+
+        public void UpdateNeeds(bool smoothen)
+        {
+
         }
 
         public void OnDrawGizmos()
