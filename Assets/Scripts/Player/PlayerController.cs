@@ -36,8 +36,23 @@ namespace LudumDare50.Player
 
         public void OnDrawGizmos()
         {
+            if (_currNode == null)
+                return;
+
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(transform.position, _currNode.transform.position);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            var rb = collision.collider.GetComponent<Rigidbody>();
+
+            if(rb != null)
+            {
+                var dir = collision.collider.transform.position - transform.position;
+                dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
+                rb.AddForce(dir * 10, ForceMode.Impulse);
+            }
         }
     }
 }
