@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
   Speed: 2
+  NeedMultiplicator: 0.025
   MinDistBetweenNode: 0.5
   PropulsionForce: 25
