@@ -679,6 +679,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 217613540}
     m_Modifications:
+    - target: {fileID: 1224355646538933564, guid: 388106e49ab3c97468c7d476a2a736b9,
+        type: 3}
+      propertyPath: NextNode
+      value: 
+      objectReference: {fileID: 542007255}
+    - target: {fileID: 1224355646538933564, guid: 388106e49ab3c97468c7d476a2a736b9,
+        type: 3}
+      propertyPath: _nextNode
+      value: 
+      objectReference: {fileID: 542007255}
     - target: {fileID: 1224355646538933565, guid: 388106e49ab3c97468c7d476a2a736b9,
         type: 3}
       propertyPath: m_RootOrder
@@ -1273,6 +1283,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1224355646006901483}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &542007255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1224355646538933564, guid: 388106e49ab3c97468c7d476a2a736b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1224355646006901483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04912d699dd75f6438863d35eb473039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &561233421
 Mesh:
   m_ObjectHideFlags: 0
@@ -3793,6 +3815,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1224355646538933564, guid: 388106e49ab3c97468c7d476a2a736b9,
         type: 3}
+      propertyPath: NextNode
+      value: 
+      objectReference: {fileID: 288615186}
+    - target: {fileID: 1224355646538933564, guid: 388106e49ab3c97468c7d476a2a736b9,
+        type: 3}
       propertyPath: _nextNode
       value: 
       objectReference: {fileID: 288615186}
@@ -4227,6 +4254,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 217613540}
     m_Modifications:
+    - target: {fileID: 1224355646538933564, guid: 388106e49ab3c97468c7d476a2a736b9,
+        type: 3}
+      propertyPath: NextNode
+      value: 
+      objectReference: {fileID: 2074251539}
     - target: {fileID: 1224355646538933564, guid: 388106e49ab3c97468c7d476a2a736b9,
         type: 3}
       propertyPath: _nextNode
