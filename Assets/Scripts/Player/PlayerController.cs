@@ -57,7 +57,7 @@ namespace LudumDare50.Player
                 {
                     var dir = collision.collider.transform.position - transform.position;
                     dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
-                    rb.AddForce(dir * 10, ForceMode.Impulse);
+                    rb.AddForce(dir * _info.PropulsionForce, ForceMode.Impulse);
                 }
             }
         }
