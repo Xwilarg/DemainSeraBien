@@ -508,11 +508,11 @@ SpringJoint:
   m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
-  m_Spring: 10
-  m_Damper: 0.2
+  m_Spring: 3
+  m_Damper: 0.04
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -520,7 +520,7 @@ SpringJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
-  m_MassScale: 1
+  m_MassScale: 2
   m_ConnectedMassScale: 1
 --- !u!1 &1195321335
 GameObject:
@@ -666,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba049dee956cf54780fa17e75facdc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlaneSpaceHeight: {x: 0, y: 2, z: 0}
 --- !u!4 &1701433088
 Transform:
   m_ObjectHideFlags: 0

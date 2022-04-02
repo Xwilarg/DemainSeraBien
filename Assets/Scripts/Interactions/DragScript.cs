@@ -10,8 +10,6 @@ public class DragScript : MonoBehaviour
     private Vector3 offset;
     private Transform toDrag;
 
-    private Inputs Actions;
-
     [SerializeField]
     private GameObject GhostMouse;
 
