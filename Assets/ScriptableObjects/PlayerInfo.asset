@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
   Speed: 2
+  MinDistBetweenNode: 0.5

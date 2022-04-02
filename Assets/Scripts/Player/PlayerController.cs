@@ -1,3 +1,4 @@
+using LudumDare50.Objective;
 using LudumDare50.SO;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace LudumDare50.Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField]
-        private Transform _destination;
+        private Node _destination;
 
         [SerializeField]
         private PlayerInfo _info;
@@ -22,10 +23,15 @@ namespace LudumDare50.Player
         private void FixedUpdate()
         {
             // Keep looking at target
-            transform.LookAt(_destination, Vector3.up);
+            transform.LookAt(_destination.transform, Vector3.up);
 
             // Move toward target
             _rb.velocity = new Vector3(transform.forward.x * _info.Speed, _rb.velocity.y, transform.forward.z * _info.Speed);
+
+            if (Vector3.Distance(transform.position, _destination.transform.position) < _info.MinDistBetweenNode)
+            {
+                _destination = _destination.NextNode;
+            }
         }
     }
 }
