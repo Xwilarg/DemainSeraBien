@@ -14,22 +14,19 @@ namespace LudumDare50.Player
         }
 
         [SerializeField]
-        private Transform[] _nodes;
+        private Node[] _nodes;
 
-        private List<Transform> _locations;
+        private List<Node> _locations;
 
         private void Start()
         {
             _locations = _nodes.ToList();
         }
 
-        public Transform GetNextNode()
+        public Node GetNextNode(NeedType need)
         {
-            var rand = Random.Range(1, _locations.Count);
-            var t = _locations[rand];
-            _locations.RemoveAt(rand);
-            _locations.Insert(0, t);
-            return t;
+            var okay = _locations.Where(x => x.GivenNeed == need).ToArray();
+            return okay[Random.Range(0, okay.Length)];
         }
     }
 }

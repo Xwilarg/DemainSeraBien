@@ -1,4 +1,7 @@
 using LudumDare50.SO;
+using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,32 +11,58 @@ namespace LudumDare50.Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField]
+        private TMP_Text _debugText;
+
+        [SerializeField]
         private PlayerInfo _info;
 
+        private readonly Dictionary<NeedType, float> _needs = new()
+        {
+            { NeedType.Food, .4f },
+            { NeedType.Social, .1f },
+            { NeedType.Exercice, .1f }
+        };
+
         private NavMeshAgent _agent;
-        private Transform _currNode;
+        private Node _currNode;
+
+        private NeedType MostNeeded => _needs.OrderByDescending(x => x.Value).First().Key;
 
         private void Start()
         {
-            _currNode = ObjectiveManager.Instance.GetNextNode();
+            _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
 
             _agent = GetComponent<NavMeshAgent>();
             _agent.destination = _currNode.transform.position;
+            UpdateDebugText();
         }
 
         private void FixedUpdate()
         {
+            // We are close enough to node, we are going to the next one
             if (Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
-                _currNode = ObjectiveManager.Instance.GetNextNode();
+                _needs[_currNode.GivenNeed] = 0f;
+                _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
                 _agent.destination = _currNode.transform.position;
+                UpdateDebugText();
+            }
+        }
+
+        private void UpdateDebugText()
+        {
+            if (_debugText != null)
+            {
+                _debugText.text = string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value}"));
             }
         }
 
         public void OnDrawGizmos()
         {
             if (_currNode == null)
+            {
                 return;
+            }
 
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(transform.position, _currNode.transform.position);
