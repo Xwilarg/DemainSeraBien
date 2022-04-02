@@ -14,5 +14,7 @@ namespace LudumDare50.SO
         [Tooltip("Min distance with objective before player go toward next node")]
         [Range(0f, 1f)]
         public float MinDistBetweenNode;
+
+        public float PropulsionForce;
     }
 }

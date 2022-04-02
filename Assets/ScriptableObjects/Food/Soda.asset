@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5d8e398eb457c4f9d4549cdfe624a9, type: 3}
-  m_Name: PlayerInfo
+  m_Script: {fileID: 11500000, guid: 488f30370f8e3ca40ab6b1c94cd8fffd, type: 3}
+  m_Name: Soda
   m_EditorClassIdentifier: 
-  Speed: 2
-  MinDistBetweenNode: 0.5
-  PropulsionForce: 25
+  Name: Soda
+  IsGoodFood: 0
