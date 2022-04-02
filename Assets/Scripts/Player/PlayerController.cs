@@ -49,11 +49,25 @@ namespace LudumDare50.Player
             }
         }
 
+        private void Update()
+        {
+            var keys = _needs.Keys;
+            for (int i = keys.Count - 1; i >= 0; i--)
+            {
+                _needs[keys.ElementAt(i)] += Time.deltaTime * _info.NeedMultiplicator;
+                if (_needs[keys.ElementAt(i)] > 1f)
+                {
+                    _needs[keys.ElementAt(i)] = 1f;
+                }
+            }
+            UpdateDebugText();
+        }
+
         private void UpdateDebugText()
         {
             if (_debugText != null)
             {
-                _debugText.text = string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value}"));
+                _debugText.text = string.Join("\n", _needs.OrderByDescending(x => x.Value).Select(x => $"{x.Key}: {x.Value:0.00}"));
             }
         }
 
