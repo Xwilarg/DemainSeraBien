@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LudumDare50.Objective
+namespace LudumDare50.Player
 {
     public class Node : MonoBehaviour
     {
