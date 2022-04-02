@@ -3,28 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GhostMouse : MonoBehaviour
+namespace LudumDare50
 {
-    [SerializeField]
-    private Vector3 PlaneSpaceHeight;
-
-    private Plane PositionPlane;
-
-    private void Start()
+    public class GhostMouse : MonoBehaviour
     {
-        PositionPlane = new Plane(Vector3.up, PlaneSpaceHeight);
-    }
+        [SerializeField]
+        private Vector3 PlaneSpaceHeight;
 
-    private void Update()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        private SpringJoint Joint;
+        private Plane PositionPlane;
 
-        if (PositionPlane.Raycast(ray, out float Enter))
+        private void Start()
         {
-            Vector3 hitPoint = ray.GetPoint(Enter);
+            PositionPlane = new Plane(Vector3.up, PlaneSpaceHeight);
+            Joint = GetComponent<SpringJoint>();
+            Joint.autoConfigureConnectedAnchor = false;
+        }
 
-            transform.position = hitPoint;
+        private void Update()
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+            if (PositionPlane.Raycast(ray, out float Enter))
+            {
+                Vector3 hitPoint = ray.GetPoint(Enter);
+                transform.position = hitPoint;
+            }
+        }
+
+        public void StartDragging(RaycastHit hit)
+        {
+            Joint.connectedBody = hit.collider.gameObject.GetComponent<Rigidbody>();
+            Joint.connectedAnchor = hit.collider.transform.position;
+        }
+
+        public void EndDrag()
+        {
+            Joint.connectedBody = null;
         }
     }
-
 }

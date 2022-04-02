@@ -2,31 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody), typeof(Collider), typeof(SpringJoint))]
-public class Draggable : MonoBehaviour
+namespace LudumDare50
 {
-    [SerializeField]
-    private float PickupDelay;
-
-    private SpringJoint Spring;
-
-    public bool CanPick { get; set; } = true;
-
-    private void Start()
+    public class Draggable : MonoBehaviour
     {
-        Spring = GetComponent<SpringJoint>();
-    }
+        [SerializeField]
+        private float PickupDelay;
 
-    public void EndDrag()
-    {
-        Spring.anchor = Vector3.zero;
-        Spring.connectedBody = null;
-        StartCoroutine(PickupDelayCoroutine());
-    }
+        public bool CanPick { get; set; } = true;
 
-    private IEnumerator PickupDelayCoroutine()
-    {
-        yield return new WaitForSeconds(PickupDelay);
-        CanPick = true;
+        public void EndDrag()
+        {
+            StartCoroutine(PickupDelayCoroutine());
+        }
+
+        private IEnumerator PickupDelayCoroutine()
+        {
+            yield return new WaitForSeconds(PickupDelay);
+            CanPick = true;
+        }
     }
 }

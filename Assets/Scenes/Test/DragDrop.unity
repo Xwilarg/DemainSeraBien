@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ceeea970aee1434c8e2ea56e1aec3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GhostMouse: {fileID: 1701433085}
+  GhostMouse: {fileID: 1701433087}
 --- !u!1 &1182918026
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +384,6 @@ GameObject:
   - component: {fileID: 1182918029}
   - component: {fileID: 1182918028}
   - component: {fileID: 1182918027}
-  - component: {fileID: 1182918034}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -404,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PickupDelay: 4
 --- !u!54 &1182918028
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -498,30 +498,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!145 &1182918034
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182918026}
-  m_ConnectedBody: {fileID: 0}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 0
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  serializedVersion: 2
-  m_Spring: 3
-  m_Damper: 0.04
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 2
-  m_ConnectedMassScale: 1
 --- !u!1 &1195321335
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +607,7 @@ GameObject:
   - component: {fileID: 1701433088}
   - component: {fileID: 1701433087}
   - component: {fileID: 1701433086}
+  - component: {fileID: 1701433089}
   m_Layer: 0
   m_Name: GhostMouse
   m_TagString: Untagged
@@ -682,3 +659,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!145 &1701433089
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701433085}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 0
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
