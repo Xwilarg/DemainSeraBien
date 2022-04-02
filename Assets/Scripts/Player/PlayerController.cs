@@ -99,11 +99,6 @@ namespace LudumDare50.Player
             _barSleep.SetValue(_needs[NeedType.Sleep]);
         }
 
-        public void UpdateNeeds(bool smoothen)
-        {
-
-        }
-
         public void OnDrawGizmos()
         {
             if (_currNode == null)
@@ -134,6 +129,10 @@ namespace LudumDare50.Player
 
                 if (rb != null)
                 {
+                    if (rb.velocity.magnitude > 10f)
+                    {
+                        // Stun player
+                    }
                     var dir = collision.collider.transform.position - transform.position;
                     dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
                     rb.AddForce(dir * _info.PropulsionForce, ForceMode.Impulse);
