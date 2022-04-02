@@ -3,28 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DragScript : MonoBehaviour
+namespace LudumDare50
 {
-    private Transform toDrag;
-
-    [SerializeField]
-    private GameObject GhostMouse;
-
-    private void Update()
+    public class DragScript : MonoBehaviour
     {
-        if (Mouse.current.leftButton.wasReleasedThisFrame) {
-            toDrag.GetComponent<Draggable>().EndDrag();
-            return;
-        }
+        private Transform toDrag;
 
-        if (Mouse.current.leftButton.wasPressedThisFrame) {
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(ray, out RaycastHit hit, 1000)) {
-                if (hit.collider.transform.GetComponent<Draggable>() != null && hit.collider.transform.GetComponent<Draggable>().CanPick) {
-                    toDrag = hit.collider.transform;
-                    toDrag.GetComponent<Draggable>().CanPick = false;
-                    toDrag.GetComponent<SpringJoint>().anchor = hit.collider.transform.position;
-                    toDrag.GetComponent<SpringJoint>().connectedBody = GhostMouse.GetComponent<Rigidbody>();
+        [SerializeField]
+        private GhostMouse GhostMouse;
+
+        private void Update()
+        {
+            if (Mouse.current.leftButton.wasReleasedThisFrame)
+            {
+                GhostMouse.EndDrag();
+                toDrag.GetComponent<Draggable>().EndDrag();
+                return;
+            }
+
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+                if (Physics.Raycast(ray, out RaycastHit hit, 1000))
+                {
+                    if (hit.collider.transform.GetComponent<Draggable>() != null && hit.collider.transform.GetComponent<Draggable>().CanPick)
+                    {
+                        toDrag = hit.collider.transform;
+                        toDrag.GetComponent<Draggable>().CanPick = false;
+                        GhostMouse.StartDragging(hit);
+                    }
                 }
             }
         }
