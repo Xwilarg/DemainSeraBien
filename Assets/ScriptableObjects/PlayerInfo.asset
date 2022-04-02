@@ -16,3 +16,4 @@ MonoBehaviour:
   NeedMultiplicator: 0.025
   MinDistBetweenNode: 0.5
   PropulsionForce: 25
+  FoodPower: 0.1
