@@ -9,33 +9,35 @@ namespace LudumDare50.Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField]
-        private Node _destination;
+        private Node _startNode;
 
         [SerializeField]
         private PlayerInfo _info;
 
         private NavMeshAgent _agent;
+        private Node _currNode;
 
         private void Start()
         {
+            _currNode = _startNode;
+
             _agent = GetComponent<NavMeshAgent>();
-            _agent.destination = _destination.transform.position;
+            _agent.destination = _currNode.transform.position;
         }
 
         private void FixedUpdate()
         {
-            if (Vector3.Distance(transform.position, _destination.transform.position) < _info.MinDistBetweenNode)
+            if (Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
-                Debug.Log(_destination.name);
-                _destination = _destination.NextNode;
-                _agent.destination = _destination.transform.position;
+                _currNode = _currNode.NextNode;
+                _agent.destination = _currNode.transform.position;
             }
         }
 
         public void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawLine(transform.position, _destination.transform.position);
+            Gizmos.DrawLine(transform.position, _currNode.transform.position);
         }
     }
 }
