@@ -31,10 +31,7 @@ namespace LudumDare50.Player
         private void Start()
         {
             _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
-
-            _agent = GetComponent<NavMeshAgent>();
-            _agent.destination = _currNode.transform.position;
-            UpdateDebugText();
+            UpdateDestination();
         }
 
         private void FixedUpdate()
@@ -43,9 +40,7 @@ namespace LudumDare50.Player
             if (Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
                 _needs[_currNode.GivenNeed] = 0f;
-                _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
-                _agent.destination = _currNode.transform.position;
-                UpdateDebugText();
+                UpdateDestination();
             }
         }
 
@@ -60,6 +55,13 @@ namespace LudumDare50.Player
                     _needs[keys.ElementAt(i)] = 1f;
                 }
             }
+            UpdateDebugText();
+        }
+
+        private void UpdateDestination()
+        {
+            _currNode = ObjectiveManager.Instance.GetNextNode(MostNeeded);
+            _agent.destination = _currNode.transform.position;
             UpdateDebugText();
         }
 
@@ -87,7 +89,9 @@ namespace LudumDare50.Player
             if (collision.collider.CompareTag("Food"))
             {
                 // Eat food we collide with
+                _needs[NeedType.Food] -= _info.FoodPower;
                 Destroy(collision.gameObject);
+                UpdateDestination();
             }
             else
             {

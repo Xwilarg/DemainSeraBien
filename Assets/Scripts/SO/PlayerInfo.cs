@@ -18,5 +18,8 @@ namespace LudumDare50.SO
         public float MinDistBetweenNode;
 
         public float PropulsionForce;
+
+        [Header("Needs")]
+        public float FoodPower;
     }
 }
