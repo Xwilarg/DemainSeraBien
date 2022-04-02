@@ -10,5 +10,9 @@ namespace LudumDare50.SO
         [Tooltip("Speed of the player")]
         [Range(0f, 10f)]
         public float Speed = 1f;
+
+        [Tooltip("Min distance with objective before player go toward next node")]
+        [Range(0f, 1f)]
+        public float MinDistBetweenNode;
     }
 }
