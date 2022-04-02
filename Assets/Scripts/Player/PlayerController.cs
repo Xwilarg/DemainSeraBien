@@ -20,7 +20,8 @@ namespace LudumDare50.Player
         private readonly Dictionary<NeedType, float> _needs = new()
         {
             { NeedType.Food, .4f },
-            { NeedType.Social, .1f },
+            { NeedType.Entertainment, .1f },
+            { NeedType.Sleep, .1f },
             { NeedType.Exercice, .1f }
         };
 

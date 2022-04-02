@@ -4,6 +4,7 @@
     {
         Food,
         Exercice,
-        Social
+        Sleep,
+        Entertainment
     }
 }
