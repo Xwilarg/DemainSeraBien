@@ -1,3 +1,4 @@
+using LudumDare50.Prop;
 using LudumDare50.SO;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,6 +23,9 @@ namespace LudumDare50.Player
 
         [SerializeField]
         private LifespanBar _barFood, _barEntertainment, _barSmoke, _barAlcohol;
+
+        [SerializeField]
+        private Launcher _fridgeLauncher;
 
         private Rigidbody _rb;
 
@@ -59,7 +63,11 @@ namespace LudumDare50.Player
             if (_rb.isKinematic && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
                 ReduceNeed(_currNode.GivenNeed);
-                UpdateDestination();
+                if (_currNode.GivenNeed == NeedType.Food)
+                {
+                    _fridgeLauncher.Throw();
+                }
+                StartCoroutine(WaitAndReenablePlayer(2f));
             }
         }
 
@@ -138,7 +146,7 @@ namespace LudumDare50.Player
                         // Stun player
                         _rb.isKinematic = false;
                         _agent.enabled = false;
-                        StartCoroutine(WaitAndReenablePlayer());
+                        StartCoroutine(WaitAndReenablePlayer(3f));
                         var invDir = transform.position - collision.collider.transform.position;
                         invDir.y = Mathf.Abs(new Vector2(invDir.x, invDir.z).magnitude) / 3f;
                         _rb.AddForce(invDir * _info.PropulsionForce * rb.velocity.magnitude, ForceMode.Impulse);
@@ -150,9 +158,9 @@ namespace LudumDare50.Player
             }
         }
 
-        private IEnumerator WaitAndReenablePlayer()
+        private IEnumerator WaitAndReenablePlayer(float time)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(time);
             _rb.isKinematic = true;
             _agent.enabled = true;
             UpdateDestination();
