@@ -15,7 +15,7 @@ MonoBehaviour:
   Speed: 2
   NeedMultiplicator: 0.025
   MinDistBetweenNode: 0.5
-  PropulsionForce: 25
+  PropulsionForce: 2
   FoodPower: 0.1
   MaxAge: 80
   AgeProgression: 0.2
