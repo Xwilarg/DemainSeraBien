@@ -190,6 +190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair
       objectReference: {fileID: 0}
+    - target: {fileID: 1893675920565071998, guid: f7ad761ec5ed5954480bf0fb014957bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7ad761ec5ed5954480bf0fb014957bf, type: 3}
 --- !u!1001 &218837122
@@ -258,6 +263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893675920565071998, guid: f7ad761ec5ed5954480bf0fb014957bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7ad761ec5ed5954480bf0fb014957bf, type: 3}
@@ -328,6 +338,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1893675920565071998, guid: f7ad761ec5ed5954480bf0fb014957bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7ad761ec5ed5954480bf0fb014957bf, type: 3}
 --- !u!1001 &590154801
@@ -396,6 +411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893675920565071998, guid: f7ad761ec5ed5954480bf0fb014957bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7ad761ec5ed5954480bf0fb014957bf, type: 3}
@@ -466,6 +486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: booze
       objectReference: {fileID: 0}
+    - target: {fileID: 9011570574928483611, guid: f547d76d9072e3e458c20265038be1f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f547d76d9072e3e458c20265038be1f6, type: 3}
 --- !u!1001 &980179856
@@ -534,6 +559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: couch
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4d17718ed0579f419b2f1d6f0af5f0a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4d17718ed0579f419b2f1d6f0af5f0a, type: 3}
@@ -614,6 +644,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: armChair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4189376916808904297, guid: 25be1db1b5495e24195a9cbea434f799,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25be1db1b5495e24195a9cbea434f799, type: 3}
 --- !u!1001 &1108984996
@@ -683,6 +718,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4260996140547012975, guid: 5e48d9bc586bf854d9a653122e259567,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e48d9bc586bf854d9a653122e259567, type: 3}
 --- !u!1001 &1263511597
@@ -695,7 +735,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2ce9aec9e37596a4398d7d768d7b8916,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2ce9aec9e37596a4398d7d768d7b8916,
         type: 3}
@@ -751,6 +791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ce9aec9e37596a4398d7d768d7b8916,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ce9aec9e37596a4398d7d768d7b8916, type: 3}
@@ -821,6 +866,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: toaster
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ff0c919612f17634597aa92823e0294b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff0c919612f17634597aa92823e0294b, type: 3}
 --- !u!1001 &1439078691
@@ -834,6 +884,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: whiskey
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674712262195327972, guid: 3a5655b4291654e459c92be2db3eedf1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4158199017330501982, guid: 3a5655b4291654e459c92be2db3eedf1,
         type: 3}
@@ -959,6 +1014,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cactus
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7901a47455fcdd446af13982c2ff1450,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7901a47455fcdd446af13982c2ff1450, type: 3}
 --- !u!1001 &1529966367
@@ -971,7 +1031,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 15ffd3b59888b664da9202d1a7d93290,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 15ffd3b59888b664da9202d1a7d93290,
         type: 3}
@@ -1027,6 +1087,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: exerciseBike
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 15ffd3b59888b664da9202d1a7d93290,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15ffd3b59888b664da9202d1a7d93290, type: 3}
@@ -1102,6 +1167,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c39a22fa27bf8a41b7b870f0c9878c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c39a22fa27bf8a41b7b870f0c9878c8, type: 3}
 --- !u!1001 &1556249225
@@ -1115,6 +1185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cheeseburger Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017927935111434962, guid: a8f9f5b54bfe21343ba0d3d7f8769d60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651440852835485800, guid: a8f9f5b54bfe21343ba0d3d7f8769d60,
         type: 3}
@@ -1185,6 +1260,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PottedTree
       objectReference: {fileID: 0}
+    - target: {fileID: 1175640064857089242, guid: 56fb696214174ae45bf7003b06a7005b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1953267862293872224, guid: 56fb696214174ae45bf7003b06a7005b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1253,6 +1333,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: table Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806670545079040589, guid: 6b3956b3b6fc16d4dbd3ea4b699d2c79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5332096792843821303, guid: 6b3956b3b6fc16d4dbd3ea4b699d2c79,
         type: 3}
