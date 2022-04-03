@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Extensions;
 
 namespace LudumDare50
 {
@@ -9,17 +10,12 @@ namespace LudumDare50
         [SerializeField]
         private float PickupDelay;
 
-        public bool CanPick { get; set; } = true;
-
-        public void EndDrag()
+        private void OnCollisionEnter(Collision collision)
         {
-            StartCoroutine(PickupDelayCoroutine());
-        }
-
-        private IEnumerator PickupDelayCoroutine()
-        {
-            yield return new WaitForSeconds(PickupDelay);
-            CanPick = true;
+            if (collision.gameObject.Contains<Player.PlayerController>())
+            {
+                FindObjectOfType<GhostMouse>().EndDrag();
+            }
         }
     }
 }
