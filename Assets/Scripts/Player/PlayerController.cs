@@ -1,6 +1,5 @@
 using LudumDare50.Prop;
 using LudumDare50.SO;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -26,6 +25,9 @@ namespace LudumDare50.Player
 
         [SerializeField]
         private Launcher _fridgeLauncher;
+
+        [SerializeField]
+        private ParticleSystem _smokeSystem;
 
         private Rigidbody _rb;
 
@@ -59,6 +61,8 @@ namespace LudumDare50.Player
 
             _age = _info.MaxAge;
             UpdateDestination();
+
+            _smokeSystem.Stop();
         }
 
         private void FixedUpdate()
@@ -70,6 +74,10 @@ namespace LudumDare50.Player
                 if (_currNode.GivenNeed == NeedType.Food)
                 {
                     _fridgeLauncher.Throw();
+                }
+                else if (_currNode.GivenNeed == NeedType.Smoke)
+                {
+                    _smokeSystem.Play();
                 }
                 _isDisabled = true;
                 ResetPlayer(2f);
@@ -98,6 +106,7 @@ namespace LudumDare50.Player
                     _isDisabled = false;
                     _rb.isKinematic = true;
                     _agent.enabled = true;
+                    _smokeSystem.Stop();
                     UpdateDestination();
                 }
             }
