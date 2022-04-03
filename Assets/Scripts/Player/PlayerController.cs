@@ -29,6 +29,8 @@ namespace LudumDare50.Player
 
         private Rigidbody _rb;
 
+        private bool _isDisabled = false;
+
         private float _age;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
@@ -60,7 +62,7 @@ namespace LudumDare50.Player
         private void FixedUpdate()
         {
             // We are close enough to node, we are going to the next one
-            if (_rb.isKinematic && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
+            if (!_isDisabled && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
                 ReduceNeed(_currNode.GivenNeed);
                 if (_currNode.GivenNeed == NeedType.Food)
@@ -147,9 +149,10 @@ namespace LudumDare50.Player
                         _rb.isKinematic = false;
                         _agent.enabled = false;
                         StartCoroutine(WaitAndReenablePlayer(3f));
-                        var invDir = transform.position - collision.collider.transform.position;
+                        var invDir = rb.velocity.normalized;
                         invDir.y = Mathf.Abs(new Vector2(invDir.x, invDir.z).magnitude) / 3f;
                         _rb.AddForce(invDir * _info.PropulsionForce * rb.velocity.magnitude, ForceMode.Impulse);
+                        _rb.AddTorque(Random.insideUnitSphere.normalized * 10f);
                     }
                     var dir = collision.collider.transform.position - transform.position;
                     dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
@@ -160,7 +163,9 @@ namespace LudumDare50.Player
 
         private IEnumerator WaitAndReenablePlayer(float time)
         {
+            _isDisabled = true;
             yield return new WaitForSeconds(time);
+            _isDisabled = false;
             _rb.isKinematic = true;
             _agent.enabled = true;
             UpdateDestination();
