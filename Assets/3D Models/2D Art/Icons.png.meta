@@ -102,18 +102,172 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Icons_0
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 555
+        width: 251
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbdaf92d5887fe47adf5cd647d4eeb7
+      internalID: 1377954799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_1
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 529
+        width: 251
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b809a79895dcc114186c23ec91d45601
+      internalID: -312979638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_2
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 717
+        width: 6
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ba545b22ee07843add4a160d67bec5
+      internalID: 2104420560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_3
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 518
+        width: 251
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de7ba66a6a91bc46942af5bba89182d
+      internalID: 41374847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_4
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 222
+        width: 251
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570a79a9005e44d4abb6eab1e9f97c41
+      internalID: -1057281339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_5
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 230
+        width: 251
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f7ce7d8480de64ca60c9191d69c58e
+      internalID: 49965763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons_6
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 231
+        width: 251
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06def6ed60dc13641ac490dab931943f
+      internalID: 1179155672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c91678dc812ed1e42845ef0770ee96fe
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Icons_5: 49965763
+      Icons_1: -312979638
+      Icons_4: -1057281339
+      Icons_6: 1179155672
+      Icons_3: 41374847
+      Icons_2: 2104420560
+      Icons_0: 1377954799
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
