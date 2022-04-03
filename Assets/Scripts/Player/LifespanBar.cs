@@ -10,11 +10,11 @@ namespace LudumDare50.Player
 
         private float _value;
         private float _valueSlow;
-        private float t = 0;
+        // private float t = 0;
 
         public void SetValue(float value)
         {
-            t = 0;
+            // t = 0;
             _value = value;
             fillBar.fillAmount = _value;
             fillBarSlow.fillAmount = _valueSlow;
