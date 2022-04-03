@@ -1,3 +1,4 @@
+using LudumDare50.Prop;
 using LudumDare50.SO;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +22,10 @@ namespace LudumDare50.Player
         private LifespanBar _healthBar;
 
         [SerializeField]
-        private LifespanBar _barFood, _barEntertainment, _barSleep, _barToilet;
+        private LifespanBar _barFood, _barEntertainment, _barSmoke, _barAlcohol;
+
+        [SerializeField]
+        private Launcher _fridgeLauncher;
 
         private Rigidbody _rb;
 
@@ -30,8 +34,8 @@ namespace LudumDare50.Player
         {
             { NeedType.Food, .4f },
             { NeedType.Entertainment, .1f },
-            { NeedType.Sleep, .1f },
-            { NeedType.Toilet, .1f }
+            { NeedType.Smoke, .1f },
+            { NeedType.Alcohol, .1f }
         };
 
         private NavMeshAgent _agent;
@@ -59,7 +63,11 @@ namespace LudumDare50.Player
             if (_rb.isKinematic && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
                 ReduceNeed(_currNode.GivenNeed);
-                UpdateDestination();
+                if (_currNode.GivenNeed == NeedType.Food)
+                {
+                    _fridgeLauncher.Throw();
+                }
+                StartCoroutine(WaitAndReenablePlayer(2f));
             }
         }
 
@@ -99,8 +107,8 @@ namespace LudumDare50.Player
 
             _barEntertainment.SetValue(_needs[NeedType.Entertainment]);
             _barFood.SetValue(_needs[NeedType.Food]);
-            _barToilet.SetValue(_needs[NeedType.Toilet]);
-            _barSleep.SetValue(_needs[NeedType.Sleep]);
+            _barSmoke.SetValue(_needs[NeedType.Smoke]);
+            _barAlcohol.SetValue(_needs[NeedType.Alcohol]);
         }
 
         public void OnDrawGizmos()
@@ -138,7 +146,7 @@ namespace LudumDare50.Player
                         // Stun player
                         _rb.isKinematic = false;
                         _agent.enabled = false;
-                        StartCoroutine(WaitAndReenablePlayer());
+                        StartCoroutine(WaitAndReenablePlayer(3f));
                         var invDir = transform.position - collision.collider.transform.position;
                         invDir.y = Mathf.Abs(new Vector2(invDir.x, invDir.z).magnitude) / 3f;
                         _rb.AddForce(invDir * _info.PropulsionForce * rb.velocity.magnitude, ForceMode.Impulse);
@@ -150,9 +158,9 @@ namespace LudumDare50.Player
             }
         }
 
-        private IEnumerator WaitAndReenablePlayer()
+        private IEnumerator WaitAndReenablePlayer(float time)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(time);
             _rb.isKinematic = true;
             _agent.enabled = true;
             UpdateDestination();
