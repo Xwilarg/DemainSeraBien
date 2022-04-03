@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: 9b26487f76c845747b5071d73cf4fab0
+guid: 82bdde18839bd9445ac4c5501fdcef56
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: -5488478867428948273
-    second: Character Armature|Walking
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
