@@ -1,4 +1,5 @@
 using LudumDare50.SO;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -22,6 +23,8 @@ namespace LudumDare50.Player
         [SerializeField]
         private LifespanBar _barFood, _barEntertainment, _barSleep, _barToilet;
 
+        private Rigidbody _rb;
+
         private float _age;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
@@ -44,6 +47,7 @@ namespace LudumDare50.Player
         private void Start()
         {
             _agent = GetComponent<NavMeshAgent>();
+            _rb = GetComponent<Rigidbody>();
 
             _age = _info.MaxAge;
             UpdateDestination();
@@ -99,11 +103,6 @@ namespace LudumDare50.Player
             _barSleep.SetValue(_needs[NeedType.Sleep]);
         }
 
-        public void UpdateNeeds(bool smoothen)
-        {
-
-        }
-
         public void OnDrawGizmos()
         {
             if (_currNode == null)
@@ -134,11 +133,29 @@ namespace LudumDare50.Player
 
                 if (rb != null)
                 {
+                    if (rb.velocity.magnitude > 10f)
+                    {
+                        // Stun player
+                        _rb.isKinematic = false;
+                        _agent.enabled = false;
+                        StartCoroutine(WaitAndReenablePlayer());
+                        var invDir = transform.position - collision.collider.transform.position;
+                        invDir.y = Mathf.Abs(new Vector2(invDir.x, invDir.z).magnitude) / 3f;
+                        _rb.AddForce(invDir * _info.PropulsionForce, ForceMode.Impulse);
+                    }
                     var dir = collision.collider.transform.position - transform.position;
                     dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
                     rb.AddForce(dir * _info.PropulsionForce, ForceMode.Impulse);
                 }
             }
+        }
+
+        private IEnumerator WaitAndReenablePlayer()
+        {
+            yield return new WaitForSeconds(3);
+            _rb.isKinematic = true;
+            _agent.enabled = true;
+            UpdateDestination();
         }
     }
 }
