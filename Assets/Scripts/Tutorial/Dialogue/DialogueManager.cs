@@ -22,8 +22,6 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        Debug.Log(NPCText);
-        Debug.Log(NPCText.text);
         NPCText.text = dialogue.name;
         sentences.Clear();
 
@@ -41,7 +39,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
         StartCoroutine(DisplayLine(sentence));
     }
 
