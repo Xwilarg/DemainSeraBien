@@ -21,7 +21,7 @@ namespace LudumDare50.Player
         private LifespanBar _healthBar;
 
         [SerializeField]
-        private LifespanBar _barFood, _barEntertainment, _barSleep, _barToilet;
+        private LifespanBar _barFood, _barEntertainment, _barSmoke, _barAlcohol;
 
         private Rigidbody _rb;
 
@@ -30,8 +30,8 @@ namespace LudumDare50.Player
         {
             { NeedType.Food, .4f },
             { NeedType.Entertainment, .1f },
-            { NeedType.Sleep, .1f },
-            { NeedType.Toilet, .1f }
+            { NeedType.Smoke, .1f },
+            { NeedType.Alcohol, .1f }
         };
 
         private NavMeshAgent _agent;
@@ -99,8 +99,8 @@ namespace LudumDare50.Player
 
             _barEntertainment.SetValue(_needs[NeedType.Entertainment]);
             _barFood.SetValue(_needs[NeedType.Food]);
-            _barToilet.SetValue(_needs[NeedType.Toilet]);
-            _barSleep.SetValue(_needs[NeedType.Sleep]);
+            _barSmoke.SetValue(_needs[NeedType.Smoke]);
+            _barAlcohol.SetValue(_needs[NeedType.Alcohol]);
         }
 
         public void OnDrawGizmos()

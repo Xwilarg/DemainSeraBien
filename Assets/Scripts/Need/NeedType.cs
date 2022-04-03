@@ -3,8 +3,8 @@
     public enum NeedType
     {
         Food,
-        Sleep,
+        Smoke,
         Entertainment,
-        Toilet
+        Alcohol
     }
 }
