@@ -56,7 +56,7 @@ namespace LudumDare50.Player
         private void FixedUpdate()
         {
             // We are close enough to node, we are going to the next one
-            if (Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
+            if (_rb.isKinematic && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
                 ReduceNeed(_currNode.GivenNeed);
                 UpdateDestination();
@@ -141,7 +141,7 @@ namespace LudumDare50.Player
                         StartCoroutine(WaitAndReenablePlayer());
                         var invDir = transform.position - collision.collider.transform.position;
                         invDir.y = Mathf.Abs(new Vector2(invDir.x, invDir.z).magnitude) / 3f;
-                        _rb.AddForce(invDir * _info.PropulsionForce, ForceMode.Impulse);
+                        _rb.AddForce(invDir * _info.PropulsionForce * rb.velocity.magnitude, ForceMode.Impulse);
                     }
                     var dir = collision.collider.transform.position - transform.position;
                     dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
