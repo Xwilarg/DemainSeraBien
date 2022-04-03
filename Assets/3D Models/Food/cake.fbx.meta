@@ -3,7 +3,27 @@ guid: 4af8bd3cb9d406747b474ebefa2b5137
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cake_Brown
+    second: {fileID: 2100000, guid: a2c95140ca82330458ff5637183912de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cake_DarkBrown
+    second: {fileID: 2100000, guid: c277eb95ab373c941b3aeaef6cb895be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cake_Red
+    second: {fileID: 2100000, guid: 979eb143a63699e4798e8f56750f2422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cake_White
+    second: {fileID: 2100000, guid: 87e63644eef331842b44c8c5012a03bb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

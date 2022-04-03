@@ -3,7 +3,27 @@ guid: 6025bf6c3776e0e4d8c8ebe15b5baf23
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pizza_DarkRed
+    second: {fileID: 2100000, guid: 1edf4f9e4f23b844786a095c048d8d61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pizza_Orange
+    second: {fileID: 2100000, guid: 40b1e55e2021607408f9d3eb7a34a211, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pizza_Red
+    second: {fileID: 2100000, guid: 9737a1ec8ae9c8f4e9add7376bfd873f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pizza_Tan
+    second: {fileID: 2100000, guid: c3eae0b1bcfb4b246a7266a979fb7def, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
