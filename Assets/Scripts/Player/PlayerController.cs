@@ -31,6 +31,8 @@ namespace LudumDare50.Player
 
         private bool _isDisabled = false;
 
+        private float _timerReset = -1f;
+
         private float _age;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
@@ -69,7 +71,8 @@ namespace LudumDare50.Player
                 {
                     _fridgeLauncher.Throw();
                 }
-                StartCoroutine(WaitAndReenablePlayer(2f));
+                _isDisabled = true;
+                ResetPlayer(2f);
             }
         }
 
@@ -86,6 +89,19 @@ namespace LudumDare50.Player
                 }
             }
             UpdateUI();
+
+            if (_timerReset > 0f)
+            {
+                _timerReset -= Time.deltaTime;
+                if (_timerReset <= 0f)
+                {
+                    _isDisabled = false;
+                    _rb.isKinematic = true;
+                    _agent.enabled = true;
+                    UpdateDestination();
+                }
+            }
+
         }
 
         private void UpdateDestination()
@@ -148,7 +164,7 @@ namespace LudumDare50.Player
                         // Stun player
                         _rb.isKinematic = false;
                         _agent.enabled = false;
-                        StartCoroutine(WaitAndReenablePlayer(3f));
+                        ResetPlayer(3f);
                         var invDir = rb.velocity.normalized;
                         invDir.y = Mathf.Abs(new Vector2(invDir.x, invDir.z).magnitude) / 3f;
                         _rb.AddForce(invDir * _info.PropulsionForce * rb.velocity.magnitude, ForceMode.Impulse);
@@ -161,14 +177,10 @@ namespace LudumDare50.Player
             }
         }
 
-        private IEnumerator WaitAndReenablePlayer(float time)
+        private void ResetPlayer(float timer)
         {
             _isDisabled = true;
-            yield return new WaitForSeconds(time);
-            _isDisabled = false;
-            _rb.isKinematic = true;
-            _agent.enabled = true;
-            UpdateDestination();
+            _timerReset = Mathf.Clamp(_timerReset + timer, 0f, 3f);
         }
     }
 }
