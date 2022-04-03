@@ -19,5 +19,8 @@ namespace Unity.Extensions
                 return CurrentObject.transform.parent.gameObject.FindFittingParent(Predicate);
             }
         }
+
+        public static bool Contains<T>(this GameObject CurrentObject)
+            => CurrentObject.GetComponent<T>() != null;
     }
 }

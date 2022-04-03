@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Extensions;
 
 namespace LudumDare50
 {
@@ -10,6 +11,14 @@ namespace LudumDare50
         private float PickupDelay;
 
         public bool CanPick { get; set; } = true;
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.Contains<Player.PlayerController>())
+            {
+                FindObjectOfType<GhostMouse>().EndDrag();
+            }
+        }
 
         public void EndDrag()
         {
