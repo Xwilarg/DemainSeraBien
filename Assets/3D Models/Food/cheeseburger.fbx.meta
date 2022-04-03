@@ -3,7 +3,32 @@ guid: f57f19364eae37c44963581889b43fa4
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cheeseburger_Brown
+    second: {fileID: 2100000, guid: 40333bfc452754c45aa7d52857f77c61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cheeseburger_Green
+    second: {fileID: 2100000, guid: cbaec7054c78ce3499baeb73a3d91873, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cheeseburger_Orange
+    second: {fileID: 2100000, guid: 5e9944f8109ddc3448d68f7940455f55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cheeseburger_Red
+    second: {fileID: 2100000, guid: 4f6802ea56e60594c822a52f4710f858, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cheeseburger_Tan
+    second: {fileID: 2100000, guid: ba5df3caf7777b9418c08fa54773cf17, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

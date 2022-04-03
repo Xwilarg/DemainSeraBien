@@ -3,7 +3,17 @@ guid: 3da4dde3dd93ab245a1325795a0a52d1
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WallDoorFrame_Brown
+    second: {fileID: 2100000, guid: 2e00f122799e1cb4d9be2ce6efd33f0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WallDoorFrame_Grey
+    second: {fileID: 2100000, guid: 3e25eeb83aa560442b7e9a9391ffe652, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
