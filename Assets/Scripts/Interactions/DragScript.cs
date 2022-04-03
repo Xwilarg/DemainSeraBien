@@ -17,10 +17,6 @@ namespace LudumDare50
         {
             if (Mouse.current.leftButton.wasReleasedThisFrame)
             {
-                if (toDrag != null) {
-                    GhostMouse.EndDrag();
-                    toDrag.GetComponent<Draggable>().EndDrag();
-                }
                 return;
             }
 
