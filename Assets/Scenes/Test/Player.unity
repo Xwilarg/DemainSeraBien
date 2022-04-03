@@ -10210,6 +10210,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bfbbf310e2405049912f5d4bce2d3c7, type: 3}
+--- !u!198 &896219936 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7004132046174073073, guid: 5bfbbf310e2405049912f5d4bce2d3c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 896219935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &902077624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11204,7 +11210,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9a3a485d5c9242c4e9195e19960764ed,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a3a485d5c9242c4e9195e19960764ed,
         type: 3}
@@ -16317,7 +16323,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3fde64a4789f5f24380d19b9f3b10bee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3fde64a4789f5f24380d19b9f3b10bee,
         type: 3}
@@ -17833,7 +17839,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9a3a485d5c9242c4e9195e19960764ed,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a3a485d5c9242c4e9195e19960764ed,
         type: 3}
@@ -22427,7 +22433,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9a3a485d5c9242c4e9195e19960764ed,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a3a485d5c9242c4e9195e19960764ed,
         type: 3}
@@ -24438,6 +24444,7 @@ MonoBehaviour:
   _barSmoke: {fileID: 1178221447}
   _barAlcohol: {fileID: 266954857}
   _fridgeLauncher: {fileID: 1481679043}
+  _smokeSystem: {fileID: 896219936}
 --- !u!195 &2024922647
 NavMeshAgent:
   m_ObjectHideFlags: 0
