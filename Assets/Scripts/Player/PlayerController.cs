@@ -39,6 +39,9 @@ namespace LudumDare50.Player
         [SerializeField]
         private GameObject _fadingTextAnimationPrefab;
 
+        [SerializeField]
+        private float _knockDownForce = 10f;
+
         private Rigidbody _rb;
 
         private bool _isDisabled = false;
@@ -187,7 +190,7 @@ namespace LudumDare50.Player
 
                 if (rb != null)
                 {
-                    if (rb.velocity.magnitude > 10f)
+                    if (rb.velocity.magnitude > _knockDownForce)
                     {
                         // Stun player
                         _rb.isKinematic = false;

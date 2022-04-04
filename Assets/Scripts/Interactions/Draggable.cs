@@ -1,20 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using Unity.Extensions;
 
 namespace LudumDare50
 {
     public class Draggable : MonoBehaviour
     {
-        [SerializeField]
-        private float PickupDelay;
+        private Rigidbody _rigidbody;
+
+
+        private void Awake()
+        {
+            _rigidbody = GetComponent<Rigidbody>();
+        }
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.Contains<Player.PlayerController>())
+            if (collision.rigidbody != null && collision.rigidbody.CompareTag("Player") &&
+                DragScript.Instance.GhostMouse.DraggingBody == _rigidbody)
             {
-                FindObjectOfType<GhostMouse>().EndDrag();
+                DragScript.Instance.EndDrag();
             }
         }
     }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +11,9 @@ namespace LudumDare50
         private SpringJoint Joint;
         private LineRenderer lineRenderer;
         private Plane PositionPlane;
+
+        public Rigidbody DraggingBody => Joint.connectedBody;
+
 
         private void Start()
         {
