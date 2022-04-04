@@ -1,3 +1,4 @@
+using LudumDare50.Menu;
 using LudumDare50.Prop;
 using LudumDare50.SO;
 using System.Collections.Generic;
@@ -5,6 +6,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace LudumDare50.Player
 {
@@ -88,6 +90,7 @@ namespace LudumDare50.Player
             if (!_isDisabled && Vector2.Distance(NullifyY(transform.position), NullifyY(_currNode.transform.position)) < _info.MinDistBetweenNode)
             {
                 _maxAge += _info.AgeAddedActivity;
+                CheckGameover();
                 ReduceNeed(_currNode.GivenNeed);
                 if (_currNode.GivenNeed == NeedType.Food)
                 {
@@ -106,6 +109,7 @@ namespace LudumDare50.Player
         private void Update()
         {
             _age -= Time.deltaTime * _info.AgeProgression;
+            CheckGameover();
             var keys = _needs.Keys;
             for (int i = keys.Count - 1; i >= 0; i--)
             {
@@ -194,6 +198,7 @@ namespace LudumDare50.Player
                     {
                         // Stun player
                         _maxAge += _info.AgeAddedHeadTrauma;
+                        CheckGameover();
                         _rb.isKinematic = false;
                         _agent.enabled = false;
                         ResetPlayer(3f);
@@ -206,6 +211,15 @@ namespace LudumDare50.Player
                     dir.y = Mathf.Abs(new Vector2(dir.x, dir.z).magnitude);
                     rb.AddForce(dir * _info.PropulsionForce, ForceMode.Impulse);
                 }
+            }
+        }
+
+        private void CheckGameover()
+        {
+            if (_maxAge > _age)
+            {
+                NFTManager.Instance.MoneyAvailable += 2;
+                SceneManager.LoadScene("GameOver");
             }
         }
 
