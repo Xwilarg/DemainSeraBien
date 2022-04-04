@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,11 +8,31 @@ namespace LudumDare50.Menu
 {
     public class MainMenu : MonoBehaviour
     {
+        public static MainMenu Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         [SerializeField]
         private Image _imageContainer;
 
         [SerializeField]
         private GameObject[] _toDisable;
+
+        [SerializeField]
+        private TMP_Text _moneyText;
+
+        private void Start()
+        {
+            UpdateText();
+        }
+
+        public void UpdateText()
+        {
+            _moneyText.text = $"{NFTManager.Instance.MoneyAvailable}$";
+        }
 
         public void Play()
         {
