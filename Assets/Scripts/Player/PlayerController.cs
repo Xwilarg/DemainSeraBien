@@ -11,6 +11,13 @@ namespace LudumDare50.Player
     [RequireComponent(typeof(NavMeshAgent))]
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         [SerializeField]
         private TMP_Text _debugText;
 
@@ -23,11 +30,8 @@ namespace LudumDare50.Player
         [SerializeField]
         private LifespanBar _barFood, _barEntertainment, _barSmoke, _barAlcohol;
 
-        [SerializeField]
-        private Launcher _fridgeLauncher;
-
-        [SerializeField]
-        private ParticleSystem _smokeSystem;
+        public Launcher FridgeLauncher { set; get; }
+        public ParticleSystem SmokeSystem { set; get; }
         
         [SerializeField]
         private Canvas _overlayCanvas;
@@ -68,8 +72,6 @@ namespace LudumDare50.Player
             _age = _info.MaxAge;
             _maxAge = 0f;
             UpdateDestination();
-
-            _smokeSystem.Stop();
         }
 
         private void FixedUpdate()
@@ -81,11 +83,11 @@ namespace LudumDare50.Player
                 ReduceNeed(_currNode.GivenNeed);
                 if (_currNode.GivenNeed == NeedType.Food)
                 {
-                    _fridgeLauncher.Throw();
+                    FridgeLauncher.Throw();
                 }
                 else if (_currNode.GivenNeed == NeedType.Smoke)
                 {
-                    _smokeSystem.Play();
+                    SmokeSystem.Play();
                 }
                 _isDisabled = true;
                 UpdateUI();
@@ -115,7 +117,7 @@ namespace LudumDare50.Player
                     _isDisabled = false;
                     _rb.isKinematic = true;
                     _agent.enabled = true;
-                    _smokeSystem.Stop();
+                    SmokeSystem.Stop();
                     UpdateDestination();
                 }
             }

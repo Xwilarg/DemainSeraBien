@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LudumDare50.Player;
+using UnityEngine;
 
 namespace LudumDare50.Prop
 {
@@ -12,6 +13,11 @@ namespace LudumDare50.Prop
 
         [SerializeField]
         private int _count;
+
+        private void Start()
+        {
+            PlayerController.Instance.FridgeLauncher = this;
+        }
 
         public void Throw()
         {

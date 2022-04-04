@@ -1,9 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace LudumDare50.Translation
 {
@@ -18,7 +16,6 @@ namespace LudumDare50.Translation
 
         private Translate()
         {
-            Assert.IsTrue(File.Exists("Assets/Plugins/Newtonsoft.Json.dll"), "Missing Newtonsoft.Json plugin, check the README inside the Plugins/ folder");
             foreach (var lang in _languages)
             {
                 _translationData.Add(lang, JsonConvert.DeserializeObject<Dictionary<string, string>>(Resources.Load<TextAsset>(lang).text));
