@@ -3,7 +3,12 @@ guid: 4199c9921daa5c94ca560b2a8f116b3b
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Hair_Brown.001
+    second: {fileID: 2100000, guid: a5aa4a8d8cb8cf34d86d83fd9efbb1fb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

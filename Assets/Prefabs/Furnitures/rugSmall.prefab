@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8248368645671255607}
   - component: {fileID: 5032715415889605010}
   - component: {fileID: 7076064621859931480}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rugSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

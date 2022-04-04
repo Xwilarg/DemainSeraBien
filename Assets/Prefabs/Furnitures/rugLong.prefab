@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8493544150358038}
   - component: {fileID: 4013260597750159283}
   - component: {fileID: 1176846920407622521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rugLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6769864438819515684}
   - component: {fileID: 7664203267998343809}
   - component: {fileID: 5600313041296889419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rugRectangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
