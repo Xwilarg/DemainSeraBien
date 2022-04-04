@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using LudumDare50.Translation;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -62,6 +63,11 @@ namespace LudumDare50.Menu
                     }
                 }
             }
+        }
+
+        public void UpdateTranslation(string lang)
+        {
+            Translate.Instance.CurrentLanguage = lang;
         }
     }
 }
