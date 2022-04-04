@@ -11,17 +11,13 @@ namespace LudumDare50.Player
         private void Awake()
         {
             Instance = this;
+            _locations = _nodes.ToList();
         }
 
         [SerializeField]
         private Node[] _nodes;
 
         private List<Node> _locations;
-
-        private void Start()
-        {
-            _locations = _nodes.ToList();
-        }
 
         public Node GetNextNode(NeedType need)
         {
