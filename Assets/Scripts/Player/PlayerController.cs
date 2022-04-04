@@ -211,7 +211,7 @@ namespace LudumDare50.Player
             fadingText.transform.position = pos;
 
             TextMeshProUGUI textMesh = fadingText.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-            textMesh.text = (n > 0) ? "+" + n.ToString() : n.ToString();
+            textMesh.text = (n > 0 ? "+" : "") + n;
             textMesh.color = (n > 0) ? Color.green : Color.red;
 
             Destroy(fadingText, 1f);
