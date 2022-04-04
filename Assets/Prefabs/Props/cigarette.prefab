@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 675743213073566283}
   - component: {fileID: 5118503105318692239}
   - component: {fileID: 5747122840582778494}
+  - component: {fileID: 8277486020777848493}
   m_Layer: 0
   m_Name: cigarette
   m_TagString: Untagged
@@ -131,3 +132,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1754714, y: 0.07622369, z: 0.08535711}
   m_Center: {x: -0.0000000671133, y: -0.06742782, z: 0.21253935}
+--- !u!114 &8277486020777848493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7467803724050437174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupDelay: 0

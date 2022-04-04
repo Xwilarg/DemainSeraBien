@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1504134034610012135}
   - component: {fileID: 1144716203913724503}
   - component: {fileID: 6132804900936451216}
+  - component: {fileID: -4179473795660584238}
   m_Layer: 0
   m_Name: coffeeTable
   m_TagString: Untagged
@@ -128,3 +129,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0024262138, y: 0.006367546, z: 0.0032602556}
   m_Center: {x: 3.174995e-24, y: -1.7437975e-17, z: 0.0016293263}
+--- !u!114 &-4179473795660584238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6665477108504746351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupDelay: 0

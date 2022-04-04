@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 8004412842590494401}
   - component: {fileID: 7818586990159053786}
   - component: {fileID: 3047816131679111444}
+  - component: {fileID: 8615989518153582727}
   m_Layer: 0
   m_Name: barbell
   m_TagString: Untagged
@@ -210,3 +211,16 @@ CapsuleCollider:
   m_Height: 0.0175
   m_Direction: 0
   m_Center: {x: 0.000047765745, y: -1.05386325e-10, z: 0.0029454506}
+--- !u!114 &8615989518153582727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364767126174695188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupDelay: 0

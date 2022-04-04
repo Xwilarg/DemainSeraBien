@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6737591200492341197}
   - component: {fileID: 8819257765264634631}
   - component: {fileID: 3317852519950434908}
+  - component: {fileID: -7443664342485620960}
   m_Layer: 0
   m_Name: cheeseburger
   m_TagString: Untagged
@@ -105,6 +106,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-7443664342485620960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017927935111434962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupDelay: 0
 --- !u!1 &8734120723146424993
 GameObject:
   m_ObjectHideFlags: 0

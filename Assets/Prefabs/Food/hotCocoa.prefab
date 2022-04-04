@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5681810403064929564}
   - component: {fileID: 8775630144781861412}
   - component: {fileID: 6114886504072127276}
+  - component: {fileID: -2291366654530384150}
   m_Layer: 0
   m_Name: hotCocoa
   m_TagString: Untagged
@@ -116,3 +117,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19827333, y: 0.20474887, z: 0.236511}
   m_Center: {x: -0.0062862188, y: 0.0007552877, z: 0.12008839}
+--- !u!114 &-2291366654530384150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186015169032912073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupDelay: 0

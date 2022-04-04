@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8451978294612961137}
   - component: {fileID: 4107341042271273648}
   - component: {fileID: 626668239594761291}
+  - component: {fileID: 285506649997762332}
   m_Layer: 0
   m_Name: oven
   m_TagString: Untagged
@@ -129,3 +130,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.044706285, y: 0.6640867, z: 0.114055276}
   m_Center: {x: 0.32550904, y: 0.004804671, z: 0.7294267}
+--- !u!114 &285506649997762332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611986188534196239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupDelay: 0

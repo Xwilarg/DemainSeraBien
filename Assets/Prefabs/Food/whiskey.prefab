@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3393421340528133774}
   - component: {fileID: 7512121443982491388}
   - component: {fileID: 6919223168167109639}
+  - component: {fileID: -3354555119978170028}
   m_Layer: 0
   m_Name: whiskey
   m_TagString: Untagged
@@ -145,3 +146,16 @@ CapsuleCollider:
   m_Height: 0.32664776
   m_Direction: 2
   m_Center: {x: -6.9758003e-25, y: 0.00010829419, z: 0.1688566}
+--- !u!114 &-3354555119978170028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9038955553957848525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupDelay: 0
