@@ -1,6 +1,7 @@
 using LudumDare50.Menu;
 using LudumDare50.Prop;
 using LudumDare50.SO;
+using LudumDare50.Translation;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -28,6 +29,16 @@ namespace LudumDare50.Player
 
         [SerializeField]
         private LifespanBar _healthBar;
+
+        [SerializeField]
+        private TMP_Text _infoText;
+
+        private int[] _ages = new[]
+        {
+            25, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120
+        };
+        private int _ageIndex = -1;
+        private float _timerAge = -1f;
 
         [SerializeField]
         private LifespanBar _barFood, _barEntertainment, _barSmoke, _barAlcohol;
@@ -109,6 +120,31 @@ namespace LudumDare50.Player
         private void Update()
         {
             _age -= Time.deltaTime * _info.AgeProgression;
+
+            var curr = GetCurrentAge();
+            for (int i = 0; i < _ages.Length; i++)
+            {
+                if (_ages[i] == curr)
+                {
+                    if (i != _ageIndex)
+                    {
+                        _ageIndex = i;
+                        _infoText.text = Translate.Instance.Tr($"age{_ages[i]}");
+                        _timerAge = 10f;
+                        break;
+                    }
+                }
+            }
+
+            if (_timerAge > 0f)
+            {
+                _timerAge -= Time.deltaTime;
+                if (_timerAge <= 0f)
+                {
+                    _infoText.text = "";
+                }
+            }
+
             CheckGameover();
             var keys = _needs.Keys;
             for (int i = keys.Count - 1; i >= 0; i--)
@@ -220,11 +256,13 @@ namespace LudumDare50.Player
             if (_maxAge > _age && !_didAddMoney)
             {
                 _didAddMoney = true;
-                NFTManager.Instance.FinalAge = Mathf.FloorToInt(_info.MaxAge - _maxAge) + 20;
+                NFTManager.Instance.FinalAge = GetCurrentAge();
                 NFTManager.Instance.MoneyAvailable += 2;
                 SceneManager.LoadScene("GameOver");
             }
         }
+
+        private int GetCurrentAge() => Mathf.FloorToInt(_info.MaxAge - _age) + 20;
 
         private void ResetPlayer(float timer)
         {
