@@ -6,8 +6,6 @@ namespace LudumDare50
 {
     public class DragScript : MonoBehaviour
     {
-        private Transform toDrag;
-
         [SerializeField]
         private GhostMouse GhostMouse;
 
@@ -24,15 +22,10 @@ namespace LudumDare50
                 Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
                 if (Physics.Raycast(ray, out RaycastHit hit, 1000))
                 {
-                    if (hit.collider.transform.GetComponent<Draggable>() != null)
+                    if (hit.rigidbody != null && hit.rigidbody.TryGetComponent(out Draggable draggable))
                     {
-                        toDrag = hit.collider.transform;
-                        GhostMouse.StartDragging(hit);
-                    }
-                    else if (hit.collider.gameObject.FindFittingParent(x => x.GetComponent<Draggable>() != null)) {
-                        GameObject FittingParent = hit.collider.gameObject.FindFittingParent(x => x.GetComponent<Draggable>());
-                        toDrag = FittingParent.transform;
-                        GhostMouse.StartDragging(hit);
+                        Vector3 connectedAnchor = hit.rigidbody.transform.worldToLocalMatrix.MultiplyPoint(hit.point);
+                        GhostMouse.StartDragging(hit.rigidbody, connectedAnchor);
                     }
                 }
             }
