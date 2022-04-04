@@ -27,6 +27,14 @@ namespace LudumDare50.Player
         [SerializeField]
         private Launcher _fridgeLauncher;
 
+        [SerializeField]
+        private Canvas _overlayCanvas;
+
+        [SerializeField]
+        private GameObject _fadingTextAnimationPrefab;
+
+        public GameObject testImg;
+
         private Rigidbody _rb;
 
         private bool _isDisabled = false;
@@ -126,8 +134,10 @@ namespace LudumDare50.Player
 
         private void OnCollisionEnter(Collision collision)
         {
+            TriggerCollisionEffects(collision.collider.tag);
+
             if (collision.collider.CompareTag("Food"))
-            {
+            {                
                 // Eat food we collide with
                 _needs[NeedType.Food] -= _info.FoodPower;
                 if (_needs[NeedType.Food] < 0f)
@@ -169,6 +179,32 @@ namespace LudumDare50.Player
             _rb.isKinematic = true;
             _agent.enabled = true;
             UpdateDestination();
+        }
+
+        public void TriggerCollisionEffects(string tagName)
+        {
+            Debug.Log($"collision with {tagName}");
+            switch (tagName)
+            {
+                case "Food":
+                    FadeNumberAbovePlayer(1);
+                    break;
+            }
+        }
+
+        // handles negative amounts
+        private void FadeNumberAbovePlayer(int n)
+        {
+            Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+           
+            // if (n < 0)
+            // {}
+    
+            GameObject fadingText = Instantiate(_fadingTextAnimationPrefab, _overlayCanvas.transform);
+            fadingText.transform.position = pos;
+            testImg.transform.position = pos;
+
+            Destroy(fadingText, 1f);
         }
     }
 }
