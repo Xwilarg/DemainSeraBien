@@ -1,0 +1,26 @@
+{
+    "play": "Play",
+    "nft": "Buy NFT",
+    "credits": "Credits",
+
+    "playToEarnMoney": "Play the game to earn money!",
+    "buy": "Buy",
+    "yourBalance": "Your balance:",
+
+    "credits3D": "3D models",
+    "creditsProg": "Programming",
+    "creditsGD": "Game Design",
+
+    "congrats": "Congratulations on your anniversary!",
+    "age25": "Your brain has begun to shrink!",
+    "age30": "You've started losing muscle mass and your metabolism is slowing down!",
+    "age40": "Your eyesight is deteriorating, your bones and joints are more fragile!",
+    "age50": "Your risk of heart disease has doubled!",
+    "age60": "The cells of all the organs in your body are beginning to deteriorate!",
+    "age70": "Taste and nerve receptor cells are dying, you are less able to recognize smells and tastes!",
+    "age80": "You're a long-lived person! Memory worsens, wounds don't heal well.",
+    "age90": "Can you really make it to 100?",
+    "age100": "You're doing great! But death is inevitable.",
+    "age110": "Do you still have the strength to read this?",
+    "age120": "Imminent death!"
+}
