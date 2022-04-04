@@ -39,12 +39,12 @@ namespace LudumDare50
             }
         }
 
-        public void StartDragging(RaycastHit hit)
+        public void StartDragging(Rigidbody connectedBody, Vector3 connectedAnchor)
         {
-            Joint.connectedBody = hit.collider.gameObject.GetComponent<Rigidbody>();
-            Joint.connectedAnchor = hit.collider.transform.worldToLocalMatrix.MultiplyPoint(hit.point);
+            Joint.connectedBody = connectedBody;
+            Joint.connectedAnchor = connectedAnchor;
             lineRenderer.enabled = true;
-            lineRenderer.SetPositions(new Vector3[] {transform.position, hit.transform.position});
+            lineRenderer.SetPositions(new Vector3[] {transform.position, connectedBody.transform.localToWorldMatrix.MultiplyPoint(connectedAnchor)});
         }
 
         public void EndDrag()
