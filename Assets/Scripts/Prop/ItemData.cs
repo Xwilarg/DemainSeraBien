@@ -1,7 +1,7 @@
 ﻿using LudumDare50.Player;
 using UnityEngine;
 
-namespace Assets.Scripts.Prop
+namespace LudumDare50.Prop
 {
     public class ItemData : MonoBehaviour
     {

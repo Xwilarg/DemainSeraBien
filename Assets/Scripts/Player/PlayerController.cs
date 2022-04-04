@@ -28,6 +28,12 @@ namespace LudumDare50.Player
 
         [SerializeField]
         private ParticleSystem _smokeSystem;
+        private Canvas _overlayCanvas;
+
+        [SerializeField]
+        private GameObject _fadingTextAnimationPrefab;
+
+        public GameObject testImg;
 
         private Rigidbody _rb;
 
@@ -151,16 +157,18 @@ namespace LudumDare50.Player
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.collider.CompareTag("Food"))
-            {
+            var consummable = collision.collider.GetComponent<ItemData>();
+            if (consummable != null)
+            {                
                 // Eat food we collide with
-                _needs[NeedType.Food] -= _info.FoodPower;
-                if (_needs[NeedType.Food] < 0f)
+                _needs[consummable.TargetNeed] -= _info.FoodPower;
+                if (_needs[consummable.TargetNeed] < 0f)
                 {
-                    _needs[NeedType.Food] = 0f;
+                    _needs[consummable.TargetNeed] = 0f;
                 }
                 Destroy(collision.gameObject);
                 UpdateDestination();
+                FadeNumberAbovePlayer(consummable.IsGood, 1);
             }
             else
             {
@@ -190,6 +198,21 @@ namespace LudumDare50.Player
         {
             _isDisabled = true;
             _timerReset = Mathf.Clamp(_timerReset + timer, 0f, 3f);
+        }
+
+        // handles negative amounts
+        private void FadeNumberAbovePlayer(bool isGood, int n)
+        {
+            Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+           
+            // if (n < 0)
+            // {}
+    
+            GameObject fadingText = Instantiate(_fadingTextAnimationPrefab, _overlayCanvas.transform);
+            fadingText.transform.position = pos;
+            testImg.transform.position = pos;
+
+            Destroy(fadingText, 1f);
         }
     }
 }
