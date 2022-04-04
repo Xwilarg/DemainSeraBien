@@ -28,12 +28,12 @@ namespace LudumDare50.Player
 
         [SerializeField]
         private ParticleSystem _smokeSystem;
+        
+        [SerializeField]
         private Canvas _overlayCanvas;
 
         [SerializeField]
         private GameObject _fadingTextAnimationPrefab;
-
-        public GameObject testImg;
 
         private Rigidbody _rb;
 
@@ -168,7 +168,7 @@ namespace LudumDare50.Player
                 }
                 Destroy(collision.gameObject);
                 UpdateDestination();
-                FadeNumberAbovePlayer(consummable.IsGood, 1);
+                FadeNumberAbovePlayer(consummable.IsGood ? 1 : -1);
             }
             else
             {
@@ -200,17 +200,15 @@ namespace LudumDare50.Player
             _timerReset = Mathf.Clamp(_timerReset + timer, 0f, 3f);
         }
 
-        // handles negative amounts
-        private void FadeNumberAbovePlayer(bool isGood, int n)
+        private void FadeNumberAbovePlayer(int n)
         {
             Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
-           
-            // if (n < 0)
-            // {}
-    
             GameObject fadingText = Instantiate(_fadingTextAnimationPrefab, _overlayCanvas.transform);
             fadingText.transform.position = pos;
-            testImg.transform.position = pos;
+
+            TextMeshProUGUI textMesh = fadingText.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+            textMesh.text = (n > 0) ? "+" + n.ToString() : n.ToString();
+            textMesh.color = (n > 0) ? Color.green : Color.red;
 
             Destroy(fadingText, 1f);
         }
