@@ -24,9 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Bathroom.unity
     guid: 9957418a10a72f34ca5be2aac8f54171
   - enabled: 1
+    path: Assets/Scenes/Rooms/Bar.unity
+    guid: 1c7678c080b733643a8d559a0db0adb9
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Entrance.unity
+    guid: 0bf936b5ec1798c4aabb53c013754439
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: c76905e206ead7946aa5de2d000bccb0
-  - enabled: 0
-    path: Assets/Scenes/Test/Main.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
