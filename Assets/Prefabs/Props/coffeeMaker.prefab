@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7327550031219757595}
   - component: {fileID: 5917576508809846206}
   - component: {fileID: 8501532974525606260}
+  - component: {fileID: 7073950887321958281}
+  - component: {fileID: 23196478727043378}
   m_Layer: 0
   m_Name: coffeeMaker
   m_TagString: Untagged
@@ -87,3 +89,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7073950887321958281
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997125487831926945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.32539257, y: 0.37158334, z: 0.573342}
+  m_Center: {x: 0.011548949, y: -0.05748363, z: 0.2867309}
+--- !u!54 &23196478727043378
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997125487831926945}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

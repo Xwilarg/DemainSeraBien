@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5803361753860338357}
   - component: {fileID: 7432757229127859472}
   - component: {fileID: 4666435204270852570}
+  - component: {fileID: 8451978294612961137}
+  - component: {fileID: 4107341042271273648}
+  - component: {fileID: 626668239594761291}
   m_Layer: 0
   m_Name: oven
   m_TagString: Untagged
@@ -84,3 +87,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8451978294612961137
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611986188534196239}
+  serializedVersion: 2
+  m_Mass: 15
+  m_Drag: 1
+  m_AngularDrag: 0.1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &4107341042271273648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611986188534196239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6665258, y: 0.6640867, z: 0.6820009}
+  m_Center: {x: 0.0145992935, y: 0.004804671, z: 0.33972806}
+--- !u!65 &626668239594761291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611986188534196239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044706285, y: 0.6640867, z: 0.114055276}
+  m_Center: {x: 0.32550904, y: 0.004804671, z: 0.7294267}
