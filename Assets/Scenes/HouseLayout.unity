@@ -166,7 +166,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.12666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 5318d0a297327784da369d2a0dc3476e, type: 2}
   m_BuildHeightMesh: 0
@@ -562,11 +562,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2010125304072801700, guid: 8d66d8bf8c838994ba0bd88210092bd4,
-        type: 3}
-      propertyPath: m_Speed
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2010125304072801702, guid: 8d66d8bf8c838994ba0bd88210092bd4,
         type: 3}
