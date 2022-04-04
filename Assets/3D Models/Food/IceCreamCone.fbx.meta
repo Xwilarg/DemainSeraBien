@@ -3,7 +3,17 @@ guid: 2ff1952fdb5b24d4692a8025a2ff244e
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_IceCreamCone_Pink
+    second: {fileID: 2100000, guid: 0facd13618ed0d14ca9494b95cfde681, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_IceCreamCone_Tan
+    second: {fileID: 2100000, guid: de5e0836c1d270942b9ae630c23a8f7a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
       type: 2}
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 55
     outlinesPassEvent: 1000
     outlineMaterial: {fileID: 2100000, guid: 8e24797acd66d654c9568dd88b2b117b, type: 2}
 --- !u!114 &-1878332245247344467

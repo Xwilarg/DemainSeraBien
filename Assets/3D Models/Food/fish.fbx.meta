@@ -3,7 +3,27 @@ guid: 69d1de9c1c423f44e892db428b1f220b
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Fish_Black
+    second: {fileID: 2100000, guid: ae652f1c5e64cce419e013c8150d2085, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Fish_Green
+    second: {fileID: 2100000, guid: 29c43544c2d2b3540a6d63bb17301992, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Fish_Orange
+    second: {fileID: 2100000, guid: 73fa43caf8106f94794e9e4b17e13604, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Fish_White
+    second: {fileID: 2100000, guid: f85fea9384bfcdc48a716f7e4d20d6bf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

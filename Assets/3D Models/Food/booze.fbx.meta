@@ -3,7 +3,22 @@ guid: 38252d866765cd747a326d03137885a7
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Booze_Black
+    second: {fileID: 2100000, guid: cdb78ceef30cafd4591e225006f51131, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Booze_Grey
+    second: {fileID: 2100000, guid: c537e5a00d4be6b40bcf59d6153f103e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Booze_Purple
+    second: {fileID: 2100000, guid: 9c7633b76d07bc5468f53390916baa93, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

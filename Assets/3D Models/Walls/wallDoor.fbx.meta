@@ -3,7 +3,22 @@ guid: 5346c4a33f55cab45a82343f5968e75f
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WallDoor_Brown
+    second: {fileID: 2100000, guid: 360bc8a2cd7af134d867c3de047c3f27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WallDoor_DarkerGrey
+    second: {fileID: 2100000, guid: 16b8d6f2cdc170f428706c7f2f256638, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WallDoor_Grey
+    second: {fileID: 2100000, guid: bd2ded0448169b847bcadbaf60d6ac98, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
