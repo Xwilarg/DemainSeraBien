@@ -214,10 +214,13 @@ namespace LudumDare50.Player
             }
         }
 
+        private bool _didAddMoney = false;
         private void CheckGameover()
         {
-            if (_maxAge > _age)
+            if (_maxAge > _age && !_didAddMoney)
             {
+                _didAddMoney = true;
+                NFTManager.Instance.FinalAge = Mathf.FloorToInt(_info.MaxAge - _maxAge);
                 NFTManager.Instance.MoneyAvailable += 2;
                 SceneManager.LoadScene("GameOver");
             }
