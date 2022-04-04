@@ -220,7 +220,7 @@ namespace LudumDare50.Player
             if (_maxAge > _age && !_didAddMoney)
             {
                 _didAddMoney = true;
-                NFTManager.Instance.FinalAge = Mathf.FloorToInt(_info.MaxAge - _maxAge);
+                NFTManager.Instance.FinalAge = Mathf.FloorToInt(_info.MaxAge - _maxAge) + 20;
                 NFTManager.Instance.MoneyAvailable += 2;
                 SceneManager.LoadScene("GameOver");
             }
