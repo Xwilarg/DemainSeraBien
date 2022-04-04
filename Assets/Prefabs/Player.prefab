@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2010125304072801707}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,8 +120,6 @@ MonoBehaviour:
   _barEntertainment: {fileID: 0}
   _barSmoke: {fileID: 0}
   _barAlcohol: {fileID: 0}
-  _fridgeLauncher: {fileID: 0}
-  _smokeSystem: {fileID: 0}
   _overlayCanvas: {fileID: 0}
   _fadingTextAnimationPrefab: {fileID: 5916583646813800733, guid: 0c690d932a263fd488fb053b512d3900,
     type: 3}
