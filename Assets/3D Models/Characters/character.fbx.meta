@@ -12,7 +12,22 @@ ModelImporter:
   - first:
       74: -4274770991410265338
     second: Armature|Walking
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Character_MediumSkinTone
+    second: {fileID: 2100000, guid: ac880d9ab2852dc4bbf22aa2604aa106, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pants_Blue
+    second: {fileID: 2100000, guid: 2d19bbb8e6db8f04e8f4de91c41a1b17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Shirt_Black
+    second: {fileID: 2100000, guid: d433f2587b30de64ea75153ceb3058df, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

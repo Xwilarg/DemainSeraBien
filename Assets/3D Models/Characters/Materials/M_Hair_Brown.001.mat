@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7699213850118212704
+--- !u!114 &-3983453235001620263
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_RhinoBeetle_DarkBrown
+  m_Name: M_Hair_Brown.001
   m_Shader: {fileID: -6465566751694194690, guid: bf36778a400a0894b86a1f49c422fa62,
     type: 3}
   m_ShaderKeywords: 
@@ -130,8 +130,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.0999931, g: 0.052505195, b: 0.018616095, a: 1}
-    - _Color: {r: 0.09999307, g: 0.052505173, b: 0.018616095, a: 1}
+    - _BaseColor: {r: 0.4466604, g: 0.23503605, b: 0.057459936, a: 1}
+    - _Color: {r: 0.4466604, g: 0.23503602, b: 0.057459913, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
