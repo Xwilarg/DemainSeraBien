@@ -24990,8 +24990,9 @@ MonoBehaviour:
   _barAlcohol: {fileID: 266954857}
   _fridgeLauncher: {fileID: 1481679043}
   _smokeSystem: {fileID: 896219936}
-  _fadingTextAnimationPrefab: {fileID: 0}
-  testImg: {fileID: 0}
+  _overlayCanvas: {fileID: 722827205}
+  _fadingTextAnimationPrefab: {fileID: 5916583646813800733, guid: 0c690d932a263fd488fb053b512d3900,
+    type: 3}
 --- !u!195 &2024922647
 NavMeshAgent:
   m_ObjectHideFlags: 0
