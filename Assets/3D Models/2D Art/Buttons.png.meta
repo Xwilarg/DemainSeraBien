@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6b050e5ef44e5748bba5c30899c226e
+guid: 8e1a1c0874bfb214f97b723a0980a10e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sleep
+      name: Play
       rect:
         serializedVersion: 2
-        x: 344
-        y: 555
-        width: 251
-        height: 251
+        x: 56
+        y: 1438
+        width: 1074
+        height: 228
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961d8db4d685b8144908d3226a47eb4e
-      internalID: 19742970
+      spriteID: e54f5653b43857a4ea78c78940c9aadd
+      internalID: -314916385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toilet
+      name: Pets
       rect:
         serializedVersion: 2
-        x: 671
-        y: 529
-        width: 251
-        height: 250
+        x: 105
+        y: 1080
+        width: 1090
+        height: 228
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 119bcf23d9289ae49b4a978d66a94c02
-      internalID: -268586045
+      spriteID: f76df905819351f42899d55b7daad950
+      internalID: -1819593890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2
+      name: Credits
       rect:
         serializedVersion: 2
-        x: 1023
-        y: 717
-        width: 6
-        height: 32
+        x: 27
+        y: 756
+        width: 1104
+        height: 228
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e736d02133133a9428a3501d5670ded1
-      internalID: 1902223314
+      spriteID: 894eb88642125d54da9a0fc4fcc62b9c
+      internalID: 813598210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Entertainment
+      name: Language
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 518
-        width: 251
-        height: 250
+        x: 97
+        y: 415
+        width: 1078
+        height: 228
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57f8dade988573b4c8aadb3783263104
-      internalID: -1804647620
+      spriteID: a958fec42d7bbda4e90c4083c81b392f
+      internalID: -998458230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hunger
+      name: Retry
       rect:
         serializedVersion: 2
-        x: 314
-        y: 222
-        width: 251
-        height: 251
+        x: 51
+        y: 65
+        width: 1060
+        height: 228
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,50 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27f7cd855219da84291e4625f5dedc95
-      internalID: 939436450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Drinky drink
-      rect:
-        serializedVersion: 2
-        x: 678
-        y: 230
-        width: 251
-        height: 251
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af86884c4f0e75346a26967e03507da8
-      internalID: -98834888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Smoking
-      rect:
-        serializedVersion: 2
-        x: 1014
-        y: 231
-        width: 251
-        height: 251
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7939d0f43e58830428ca78e60a9cb3b5
-      internalID: 320633858
+      spriteID: 49cf5ad41dd8e7248866d6232a04bbe7
+      internalID: 624730023
       vertices: []
       indices: 
       edges: []
@@ -253,7 +211,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5c27239e75b738c439edc89bcd51a6a2
+    spriteID: e04e032ee86323046ae598281cc06d25
     internalID: 0
     vertices: []
     indices: 
@@ -261,13 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Entertainment: -1804647620
-      Drinky drink: -98834888
-      Sleep: 19742970
-      Smoking: 320633858
-      Icons_2: 1902223314
-      Toilet: -268586045
-      Hunger: 939436450
+      Language: -998458230
+      Play: -314916385
+      Pets: -1819593890
+      Credits: 813598210
+      Retry: 624730023
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
