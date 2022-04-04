@@ -46,6 +46,7 @@ namespace LudumDare50.Translation
             }
             else
             {
+                Debug.LogWarning($"Key \"{key}\" not found for {_currentLanguage} language");
                 sentence = _translationData["english"][key];
             }
             for (int i = 0; i < arguments.Length; i++)

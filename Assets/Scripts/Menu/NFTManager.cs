@@ -20,5 +20,7 @@ namespace LudumDare50.Menu
         }
 
         public int MoneyAvailable { get; private set; } = 0;
+
+        public int FinalAge { set; get; }
     }
 }
