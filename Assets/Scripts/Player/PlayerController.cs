@@ -74,10 +74,15 @@ namespace LudumDare50.Player
             UpdateDestination();
         }
 
+        private Vector2 NullifyY(Vector3 v)
+        {
+            return new Vector2(v.x, v.z);
+        }
+
         private void FixedUpdate()
         {
             // We are close enough to node, we are going to the next one
-            if (!_isDisabled && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
+            if (!_isDisabled && Vector2.Distance(NullifyY(transform.position), NullifyY(_currNode.transform.position)) < _info.MinDistBetweenNode)
             {
                 _maxAge += 5f;
                 ReduceNeed(_currNode.GivenNeed);
