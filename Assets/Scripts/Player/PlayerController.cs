@@ -1,6 +1,5 @@
 using LudumDare50.Prop;
 using LudumDare50.SO;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -27,11 +26,22 @@ namespace LudumDare50.Player
         [SerializeField]
         private Launcher _fridgeLauncher;
 
+        [SerializeField]
+        private ParticleSystem _smokeSystem;
+        
+        [SerializeField]
+        private Canvas _overlayCanvas;
+
+        [SerializeField]
+        private GameObject _fadingTextAnimationPrefab;
+
         private Rigidbody _rb;
 
         private bool _isDisabled = false;
 
-        private float _age;
+        private float _timerReset = -1f;
+
+        private float _age, _maxAge;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
             { NeedType.Food, .4f },
@@ -56,7 +66,10 @@ namespace LudumDare50.Player
             _rb = GetComponent<Rigidbody>();
 
             _age = _info.MaxAge;
+            _maxAge = 0f;
             UpdateDestination();
+
+            _smokeSystem.Stop();
         }
 
         private void FixedUpdate()
@@ -64,12 +77,19 @@ namespace LudumDare50.Player
             // We are close enough to node, we are going to the next one
             if (!_isDisabled && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
+                _maxAge += 5f;
                 ReduceNeed(_currNode.GivenNeed);
                 if (_currNode.GivenNeed == NeedType.Food)
                 {
                     _fridgeLauncher.Throw();
                 }
-                StartCoroutine(WaitAndReenablePlayer(2f));
+                else if (_currNode.GivenNeed == NeedType.Smoke)
+                {
+                    _smokeSystem.Play();
+                }
+                _isDisabled = true;
+                UpdateUI();
+                ResetPlayer(2f);
             }
         }
 
@@ -86,6 +106,20 @@ namespace LudumDare50.Player
                 }
             }
             UpdateUI();
+
+            if (_timerReset > 0f)
+            {
+                _timerReset -= Time.deltaTime;
+                if (_timerReset <= 0f)
+                {
+                    _isDisabled = false;
+                    _rb.isKinematic = true;
+                    _agent.enabled = true;
+                    _smokeSystem.Stop();
+                    UpdateDestination();
+                }
+            }
+
         }
 
         private void UpdateDestination()
@@ -106,6 +140,7 @@ namespace LudumDare50.Player
             }
 
             _healthBar.SetValue(_age / _info.MaxAge);
+            _healthBar.SetOtherValue(_maxAge / _info.MaxAge);
 
             _barEntertainment.SetValue(_needs[NeedType.Entertainment]);
             _barFood.SetValue(_needs[NeedType.Food]);
@@ -126,16 +161,18 @@ namespace LudumDare50.Player
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.collider.CompareTag("Food"))
-            {
+            var consummable = collision.collider.GetComponent<ItemData>();
+            if (consummable != null)
+            {                
                 // Eat food we collide with
-                _needs[NeedType.Food] -= _info.FoodPower;
-                if (_needs[NeedType.Food] < 0f)
+                _needs[consummable.TargetNeed] -= _info.FoodPower;
+                if (_needs[consummable.TargetNeed] < 0f)
                 {
-                    _needs[NeedType.Food] = 0f;
+                    _needs[consummable.TargetNeed] = 0f;
                 }
                 Destroy(collision.gameObject);
                 UpdateDestination();
+                FadeNumberAbovePlayer(consummable.IsGood ? 1 : -1);
             }
             else
             {
@@ -148,7 +185,7 @@ namespace LudumDare50.Player
                         // Stun player
                         _rb.isKinematic = false;
                         _agent.enabled = false;
-                        StartCoroutine(WaitAndReenablePlayer(3f));
+                        ResetPlayer(3f);
                         var invDir = rb.velocity.normalized;
                         invDir.y = Mathf.Abs(new Vector2(invDir.x, invDir.z).magnitude) / 3f;
                         _rb.AddForce(invDir * _info.PropulsionForce * rb.velocity.magnitude, ForceMode.Impulse);
@@ -161,14 +198,23 @@ namespace LudumDare50.Player
             }
         }
 
-        private IEnumerator WaitAndReenablePlayer(float time)
+        private void ResetPlayer(float timer)
         {
             _isDisabled = true;
-            yield return new WaitForSeconds(time);
-            _isDisabled = false;
-            _rb.isKinematic = true;
-            _agent.enabled = true;
-            UpdateDestination();
+            _timerReset = Mathf.Clamp(_timerReset + timer, 0f, 3f);
+        }
+
+        private void FadeNumberAbovePlayer(int n)
+        {
+            Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+            GameObject fadingText = Instantiate(_fadingTextAnimationPrefab, _overlayCanvas.transform);
+            fadingText.transform.position = pos;
+
+            TextMeshProUGUI textMesh = fadingText.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+            textMesh.text = (n > 0) ? "+" + n.ToString() : n.ToString();
+            textMesh.color = (n > 0) ? Color.green : Color.red;
+
+            Destroy(fadingText, 1f);
         }
     }
 }
