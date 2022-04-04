@@ -27400,18 +27400,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6593389686202198934, guid: 9f67ccb7165059e4984978368faa27f9,
         type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6593389686202198934, guid: 9f67ccb7165059e4984978368faa27f9,
+        type: 3}
       propertyPath: m_Color.b
-      value: 0.19215687
+      value: 0.32941177
       objectReference: {fileID: 0}
     - target: {fileID: 6593389686202198934, guid: 9f67ccb7165059e4984978368faa27f9,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7529412
+      value: 0.14901961
       objectReference: {fileID: 0}
     - target: {fileID: 6593389686202198934, guid: 9f67ccb7165059e4984978368faa27f9,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.08627451
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6593389686202198935, guid: 9f67ccb7165059e4984978368faa27f9,
         type: 3}
@@ -27522,6 +27527,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifespanBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824863210750537584, guid: 9f67ccb7165059e4984978368faa27f9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.22352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824863210750537584, guid: 9f67ccb7165059e4984978368faa27f9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824863210750537584, guid: 9f67ccb7165059e4984978368faa27f9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.92941177
       objectReference: {fileID: 0}
     - target: {fileID: 7824863210750537584, guid: 9f67ccb7165059e4984978368faa27f9,
         type: 3}
