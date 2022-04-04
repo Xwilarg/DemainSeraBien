@@ -73,6 +73,8 @@ namespace LudumDare50.Player
         private NavMeshAgent _agent;
         private Node _currNode;
 
+        private float _canDamage;
+
         private NeedType MostNeeded => _needs.OrderByDescending(x => x.Value).First().Key;
 
         public void ReduceNeed(NeedType need)
@@ -120,6 +122,7 @@ namespace LudumDare50.Player
         private void Update()
         {
             _age -= Time.deltaTime * _info.AgeProgression;
+            _canDamage -= Time.deltaTime;
 
             var curr = GetCurrentAge();
             for (int i = 0; i < _ages.Length; i++)
@@ -224,8 +227,9 @@ namespace LudumDare50.Player
                 UpdateDestination();
                 FadeNumberAbovePlayer(consummable.IsGood ? 1 : -1);
             }
-            else
+            else if (_canDamage < 0f)
             {
+                _canDamage = 1f;
                 var rb = collision.collider.GetComponent<Rigidbody>();
 
                 if (rb != null)

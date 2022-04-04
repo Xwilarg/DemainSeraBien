@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
   Speed: 2
-  NeedMultiplicator: 0.025
+  NeedMultiplicator: 0.01
   MinDistBetweenNode: 0.5
   PropulsionForce: 2
-  FoodPower: 0.1
+  FoodPower: 0.05
   MaxAge: 100
   AgeProgression: 0.2
   AgeAddedActivity: 5
