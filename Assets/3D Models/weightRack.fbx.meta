@@ -3,7 +3,22 @@ guid: 87cab5d691da41d45abff9a4dcdce3ab
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WeightRack_Black
+    second: {fileID: 2100000, guid: b1f29bb9a21ba784e932b7e870720edd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WeightRack_Blue
+    second: {fileID: 2100000, guid: 8b219f0a7e211594a90326e17dc03a39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_WeightRack_Silver
+    second: {fileID: 2100000, guid: a5f5168b9bb9ef34aa15407e23421efd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,27 @@ guid: 5b3e774e39d568a4399572d1a00813c0
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Treadmill_Black
+    second: {fileID: 2100000, guid: 3bb55c728f1613a4786eb2bc3a0d27d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Treadmill_DarkGreen
+    second: {fileID: 2100000, guid: 95ed504028e6e4440bcde75452a5b60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Treadmill_Green
+    second: {fileID: 2100000, guid: 3b2770a583a6f9c489304ce2a01a9f9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Treadmill_Grey
+    second: {fileID: 2100000, guid: a982ae067d7ed4447a10bdcf1f5a4486, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

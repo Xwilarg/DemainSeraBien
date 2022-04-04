@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ea30fb43af4b844bbec511ac72ef21c
+guid: 6da295af2be654046a43d3f2911c89f6
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Black
-    second: {fileID: 2100000, guid: 7930380bb13d16a45bff125182189595, type: 2}
+      name: M_Canvas_LightBrown.001
+    second: {fileID: 2100000, guid: 9cd000ee4124e2449b8dfd3cf8ba8696, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Grey
-    second: {fileID: 2100000, guid: 10e7d1c3e9094a8428b0444ac53961b3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Orange
-    second: {fileID: 2100000, guid: 7209778f6e39c1b4894827d55a0775ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Yellow
-    second: {fileID: 2100000, guid: d2f8eb8d97055bc479ccb18206f7a3b1, type: 2}
+      name: M_Canvas_White.001
+    second: {fileID: 2100000, guid: bbcfda91e2c8a4c4bbbb58d79c416b91, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

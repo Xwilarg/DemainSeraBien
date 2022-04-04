@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ea30fb43af4b844bbec511ac72ef21c
+guid: a167a0168717f804887036a0d5e4a6f8
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Black
-    second: {fileID: 2100000, guid: 7930380bb13d16a45bff125182189595, type: 2}
+      name: M_RugRectangle_Purple
+    second: {fileID: 2100000, guid: c01ac7b0ddc390d45855d45a2b396dbe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Grey
-    second: {fileID: 2100000, guid: 10e7d1c3e9094a8428b0444ac53961b3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Orange
-    second: {fileID: 2100000, guid: 7209778f6e39c1b4894827d55a0775ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Yellow
-    second: {fileID: 2100000, guid: d2f8eb8d97055bc479ccb18206f7a3b1, type: 2}
+      name: M_RugRectangle_Tan
+    second: {fileID: 2100000, guid: d7ec5fae04b8a7442bffb9e7c15cd9dd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

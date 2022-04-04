@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ea30fb43af4b844bbec511ac72ef21c
+guid: 52b2681de7e4d0b4fa426f9523fcf64a
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,23 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Black
-    second: {fileID: 2100000, guid: 7930380bb13d16a45bff125182189595, type: 2}
+      name: M_Candles_Black
+    second: {fileID: 2100000, guid: 4dfd9730986afbb46bf4493a043b3d46, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Grey
-    second: {fileID: 2100000, guid: 10e7d1c3e9094a8428b0444ac53961b3, type: 2}
+      name: M_Candles_Mauve
+    second: {fileID: 2100000, guid: b01d860d7376b1f4cbcd10082bababec, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Orange
-    second: {fileID: 2100000, guid: 7209778f6e39c1b4894827d55a0775ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Yellow
-    second: {fileID: 2100000, guid: d2f8eb8d97055bc479ccb18206f7a3b1, type: 2}
+      name: M_Candles_OffWhite
+    second: {fileID: 2100000, guid: c95cb321aeb5ce04885bbf317809e58d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

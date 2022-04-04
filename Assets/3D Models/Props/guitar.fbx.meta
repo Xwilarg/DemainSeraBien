@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ea30fb43af4b844bbec511ac72ef21c
+guid: cd094043cc63ce24c968993aa10efcc3
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,23 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Black
-    second: {fileID: 2100000, guid: 7930380bb13d16a45bff125182189595, type: 2}
+      name: M_Guitar_Black
+    second: {fileID: 2100000, guid: cfa26e58b5c04ec4b98b13edf609379b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Grey
-    second: {fileID: 2100000, guid: 10e7d1c3e9094a8428b0444ac53961b3, type: 2}
+      name: M_Guitar_Tan
+    second: {fileID: 2100000, guid: 2e3fba728c6956441a3888a156b05e43, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Orange
-    second: {fileID: 2100000, guid: 7209778f6e39c1b4894827d55a0775ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Yellow
-    second: {fileID: 2100000, guid: d2f8eb8d97055bc479ccb18206f7a3b1, type: 2}
+      name: M_Guitar_White
+    second: {fileID: 2100000, guid: e21f566fe5512774aa2edf02c8d12d1c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

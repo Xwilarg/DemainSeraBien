@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ea30fb43af4b844bbec511ac72ef21c
+guid: 03dacea49d26d5d4780d3c601e601fe8
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,23 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Black
-    second: {fileID: 2100000, guid: 7930380bb13d16a45bff125182189595, type: 2}
+      name: M_Package_Brown
+    second: {fileID: 2100000, guid: 70fe02afdf58b064b828210ca3c912aa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Grey
-    second: {fileID: 2100000, guid: 10e7d1c3e9094a8428b0444ac53961b3, type: 2}
+      name: M_Package_OffWhite
+    second: {fileID: 2100000, guid: 8fc39dab797228c4396c37656a2c6a1f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Orange
-    second: {fileID: 2100000, guid: 7209778f6e39c1b4894827d55a0775ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_RowingMachine_Yellow
-    second: {fileID: 2100000, guid: d2f8eb8d97055bc479ccb18206f7a3b1, type: 2}
+      name: M_Package_Tan
+    second: {fileID: 2100000, guid: 0910f60514f36dd4180c3480ee2bf409, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6010345720020788889
+--- !u!1 &1908389286134617266
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,27 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6350877267837631523}
-  - component: {fileID: 8038083861904601990}
-  - component: {fileID: 5217972014254344012}
-  - component: {fileID: -4018323065997796684}
-  - component: {fileID: 755453519293330712}
-  - component: {fileID: 4275842899392413296}
+  - component: {fileID: 1238530980223340040}
+  - component: {fileID: 2783223229845094829}
+  - component: {fileID: 106689469647205735}
+  - component: {fileID: 2723893033430873095}
   m_Layer: 0
-  m_Name: bathroomCounter
+  m_Name: canvasWithUVWrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6350877267837631523
+--- !u!4 &1238530980223340040
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6010345720020788889}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_GameObject: {fileID: 1908389286134617266}
+  m_LocalRotation: {x: -4.3297806e-17, y: 0.7071068, z: 0.7071068, w: -4.3297806e-17}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -36,21 +34,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8038083861904601990
+--- !u!33 &2783223229845094829
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6010345720020788889}
-  m_Mesh: {fileID: 5486474221223460673, guid: 32a98c3cd601db147b6ef46e5a578bf5, type: 3}
---- !u!23 &5217972014254344012
+  m_GameObject: {fileID: 1908389286134617266}
+  m_Mesh: {fileID: 4192728564377462247, guid: ec47234ea30c18b4580d9d4fa7f6a02c, type: 3}
+--- !u!23 &106689469647205735
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6010345720020788889}
+  m_GameObject: {fileID: 1908389286134617266}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,9 +62,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 056188aa1d08c774c959970e4d613245, type: 2}
-  - {fileID: 2100000, guid: 3212c172c2628b248a70dece0ef30525, type: 2}
-  - {fileID: 2100000, guid: 919837a342cff444d9a07bfd49025926, type: 2}
+  - {fileID: 2100000, guid: f4d0739021a41ee49b0d622ffabed87f, type: 2}
+  - {fileID: 2100000, guid: 669cc16805aaefc44871ff1188c28db7, type: 2}
+  - {fileID: 2100000, guid: 9e94c51d4ae51644481300a7f950c020, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,44 +86,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-4018323065997796684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6010345720020788889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &755453519293330712
+--- !u!54 &2723893033430873095
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6010345720020788889}
+  m_GameObject: {fileID: 1908389286134617266}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 2
-  m_AngularDrag: 0.1
+  m_Mass: 0.1
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4275842899392413296
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6010345720020788889}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.67196953, y: 1.4328971, z: 0.69517505}
-  m_Center: {x: 0.18363214, y: 0.02653861, z: 0.3451853}
