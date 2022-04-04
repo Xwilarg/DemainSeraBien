@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 3252119143293802327}
   - component: {fileID: 1913469864220645618}
   - component: {fileID: 4425620054903204920}
+  - component: {fileID: 3683750251429389901}
+  - component: {fileID: 6307637925156398973}
+  - component: {fileID: 4051866932660825537}
   m_Layer: 3
-  m_Name: WallDoorFrame
+  m_Name: wallDoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,3 +87,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3683750251429389901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768035425488866797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000002, y: 0.25827748, z: 0.9725772}
+  m_Center: {x: 2.5872908e-14, y: -0.00012169778, z: 1.5897663}
+--- !u!65 &6307637925156398973
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768035425488866797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1859439, y: 0.25827748, z: 2.6205802}
+  m_Center: {x: -0.9070282, y: -0.000121697776, z: -0.19073784}
+--- !u!65 &4051866932660825537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2768035425488866797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20655823, y: 0.25827748, z: 2.6205802}
+  m_Center: {x: 0.896721, y: -0.00012169778, z: -0.19073784}
