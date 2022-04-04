@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace LudumDare50.Menu
 {
@@ -19,8 +20,20 @@ namespace LudumDare50.Menu
             }
         }
 
-        public int MoneyAvailable { get; private set; } = 0;
+        public int MoneyAvailable { get; set; } = 0;
 
         public int FinalAge { set; get; }
+
+        private List<int> _idGot = new();
+
+        public void AddId(int id)
+        {
+            _idGot.Add(id);
+        }
+
+        public bool ContainsId(int id)
+        {
+            return _idGot.Contains(id);
+        }
     }
 }
