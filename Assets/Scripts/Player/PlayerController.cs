@@ -41,7 +41,7 @@ namespace LudumDare50.Player
 
         private float _timerReset = -1f;
 
-        private float _age;
+        private float _age, _maxAge;
         private readonly Dictionary<NeedType, float> _needs = new()
         {
             { NeedType.Food, .4f },
@@ -66,6 +66,7 @@ namespace LudumDare50.Player
             _rb = GetComponent<Rigidbody>();
 
             _age = _info.MaxAge;
+            _maxAge = 0f;
             UpdateDestination();
 
             _smokeSystem.Stop();
@@ -76,6 +77,7 @@ namespace LudumDare50.Player
             // We are close enough to node, we are going to the next one
             if (!_isDisabled && Vector3.Distance(transform.position, _currNode.transform.position) < _info.MinDistBetweenNode)
             {
+                _maxAge += 5f;
                 ReduceNeed(_currNode.GivenNeed);
                 if (_currNode.GivenNeed == NeedType.Food)
                 {
@@ -86,6 +88,7 @@ namespace LudumDare50.Player
                     _smokeSystem.Play();
                 }
                 _isDisabled = true;
+                UpdateUI();
                 ResetPlayer(2f);
             }
         }
@@ -137,6 +140,7 @@ namespace LudumDare50.Player
             }
 
             _healthBar.SetValue(_age / _info.MaxAge);
+            _healthBar.SetOtherValue(_maxAge / _info.MaxAge);
 
             _barEntertainment.SetValue(_needs[NeedType.Entertainment]);
             _barFood.SetValue(_needs[NeedType.Food]);
