@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8775630144781861412}
   - component: {fileID: 6114886504072127276}
   - component: {fileID: -2291366654530384150}
+  - component: {fileID: -2473685342312862257}
   m_Layer: 0
   m_Name: hotCocoa
   m_TagString: Untagged
@@ -129,4 +130,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupDelay: 0
+--- !u!114 &-2473685342312862257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186015169032912073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce58a2521046e7f40a0a083aa9207ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetNeed: 3
+  IsGood: 1

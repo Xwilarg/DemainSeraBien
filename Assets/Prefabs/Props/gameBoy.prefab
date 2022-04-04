@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3758076346704835816}
   - component: {fileID: 1424168615282950178}
   - component: {fileID: 1237466572214153453}
+  - component: {fileID: 7174451633513882591}
   m_Layer: 0
   m_Name: gameBoy
   m_TagString: Untagged
@@ -99,4 +100,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupDelay: 0
+--- !u!114 &7174451633513882591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631442653344227831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce58a2521046e7f40a0a083aa9207ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetNeed: 2
+  IsGood: 0

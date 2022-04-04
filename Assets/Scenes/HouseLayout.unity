@@ -563,6 +563,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2010125304072801700, guid: 8d66d8bf8c838994ba0bd88210092bd4,
+        type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2010125304072801702, guid: 8d66d8bf8c838994ba0bd88210092bd4,
         type: 3}
       propertyPath: _barFood

@@ -10,6 +10,8 @@
     "credits3D": "3D models",
     "creditsProg": "Programming",
     "creditsGD": "Game Design",
+    "creditsDutch": "Dutch translation",
+    "creditsFont": "font",
 
     "congrats": "Congratulations on your anniversary!",
     "age25": "Your brain has begun to shrink!",
@@ -22,5 +24,9 @@
     "age90": "Can you really make it to 100?",
     "age100": "You're doing great! But death is inevitable.",
     "age110": "Do you still have the strength to read this?",
-    "age120": "Imminent death!"
+    "age120": "Imminent death!",
+
+    "gameOver": "Game Over",
+    "years": "years",
+    "mainMenu": "Main menu"
 }
