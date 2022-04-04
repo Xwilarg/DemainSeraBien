@@ -11,7 +11,8 @@ namespace LudumDare50.Translation
         {
             "english",
             "french",
-            "russian"
+            "russian",
+            "dutch"
         };
 
         private Translate()
