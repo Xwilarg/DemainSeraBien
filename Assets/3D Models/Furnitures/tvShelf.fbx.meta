@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_TVShelf_Brown
+    second: {fileID: 2100000, guid: 47b99f8eea721144cacdf61feef104fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_TVShelf_Brown.002
     second: {fileID: 2100000, guid: f0e4082654640684a97e4158511adbbe, type: 2}
   - first:
