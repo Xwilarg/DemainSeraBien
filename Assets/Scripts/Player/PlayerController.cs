@@ -87,7 +87,7 @@ namespace LudumDare50.Player
             // We are close enough to node, we are going to the next one
             if (!_isDisabled && Vector2.Distance(NullifyY(transform.position), NullifyY(_currNode.transform.position)) < _info.MinDistBetweenNode)
             {
-                _maxAge += 5f;
+                _maxAge += _info.AgeAddedActivity;
                 ReduceNeed(_currNode.GivenNeed);
                 if (_currNode.GivenNeed == NeedType.Food)
                 {
@@ -193,6 +193,7 @@ namespace LudumDare50.Player
                     if (rb.velocity.magnitude > _knockDownForce)
                     {
                         // Stun player
+                        _maxAge += _info.AgeAddedHeadTrauma;
                         _rb.isKinematic = false;
                         _agent.enabled = false;
                         ResetPlayer(3f);

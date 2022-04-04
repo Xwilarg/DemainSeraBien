@@ -25,5 +25,8 @@ namespace LudumDare50.SO
         [Header("Age")]
         public float MaxAge;
         public float AgeProgression;
+
+        public int AgeAddedActivity;
+        public int AgeAddedHeadTrauma;
     }
 }
