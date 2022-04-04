@@ -18,8 +18,11 @@ namespace LudumDare50.Prop
             for (int i = 0; i < _count; i++)
             {
                 var go = Instantiate(_foods[Random.Range(0, _foods.Length)], _output.transform.position, Random.rotation);
-                go.GetComponent<Rigidbody>().AddForce((transform.position - _output.position).normalized * 10f
-                    * Random.insideUnitCircle, ForceMode.Impulse);
+                if (go.TryGetComponent(out Rigidbody rigidbody))
+                {
+                    rigidbody.AddForce((transform.position - _output.position).normalized * 10f
+                                                                                          * Random.insideUnitCircle, ForceMode.Impulse);
+                }
             }
         }
     }
