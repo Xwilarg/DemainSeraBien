@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3733266428965553029}
   - component: {fileID: 1636805533128004815}
   - component: {fileID: 319947396730707937}
+  - component: {fileID: 8523197827824541081}
   m_Layer: 0
   m_Name: easel
   m_TagString: Untagged
@@ -130,6 +131,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetNeed: 2
   IsGood: 1
+--- !u!65 &8523197827824541081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3853257150787511555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6684107, y: 0.088623166, z: 0.044900287}
+  m_Center: {x: -2.0639733e-11, y: 0.0059509426, z: 0.74468684}
 --- !u!1 &6678305543940595190
 GameObject:
   m_ObjectHideFlags: 0
