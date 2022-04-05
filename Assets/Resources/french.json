@@ -1,0 +1,28 @@
+{
+    "play": "Jouer",
+    "nft": "Acheter des NFT",
+    "credits": "Crédits",
+
+    "playToEarnMoney": "Jouez au jeu pour gagner de l'argent !",
+    "buy": "Acheter",
+    "yourBalance": "Vous avez:",
+
+    "credits3D": "Modèles 3D",
+    "creditsProg": "Programmation",
+    "creditsGD": "Game Design",
+    "creditsDutch": "Translation néerlandaise",
+    "creditsFont": "police",
+
+    "congrats": "Félicitation pour votre anniversaire !",
+    "age25": "Votre cerveau a commencé a rétrécir",
+    "age30": "Vous avez commencé à perdre de la masse musculaire et votre métabolisme se ralenti !",
+    "age40": "Votre vue se détériore, et vos os et jointures sont plus fragiles !",
+    "age50": "Vos risques de crise cardiaque ont doublés !",
+    "age60": "Les cellules de tous les organes de votre corps ont commencé à se détériorer !",
+    "age70": "Les cellules de vos récepteurs gustatifs et nerveux sont en train de mourrir, vous serrez moins capable de reconnaitre les goûts et les odeurs !",
+    "age80": "Vous êtes vieux ! Votre mémoire empire, vos blessures se guérissent mal.",
+    "age90": "Pouvez-vous vraiment atteindre 100 ans ?",
+    "age100": "Vous allez toujours bien ! Mais la mort est inévitable.",
+    "age110": "Avez-vous toujours la force de lire ceci ?",
+    "age120": "Mort imminente !"
+}
