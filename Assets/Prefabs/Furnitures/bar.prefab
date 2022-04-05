@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2690729215383743001}
   - component: {fileID: 194662756826635987}
   - component: {fileID: -4156152098159443834}
+  - component: {fileID: 8613353626161021009}
+  - component: {fileID: 315920043906341113}
   m_Layer: 0
   m_Name: bar
   m_TagString: Untagged
@@ -98,4 +100,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3071acb5aff159941a6ee14b6c06c2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupDelay: 0
+--- !u!54 &8613353626161021009
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851939108990615302}
+  serializedVersion: 2
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &315920043906341113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851939108990615302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6237514, y: 0.4893641, z: 0.76340395}
+  m_Center: {x: 0.04852009, y: -0.014892192, z: 0.38186932}
